@@ -1,13 +1,20 @@
 import React from 'react'
 import cls from './MainPage.module.scss'
+import { Info } from '../../components/Info/Info'
+import WindowImg from '../../components/WindowImg/WindowImg'
+
 
 
 
 
 export const MainPage = () => {
     return (
-        <div >
-main page
+        <div className={cls.MainPage} >
+            <WindowImg />
+            <div className={cls.container}>
+                <Info />
+            </div>
+            
         </div>
     )
 }

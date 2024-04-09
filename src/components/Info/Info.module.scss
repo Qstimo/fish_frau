@@ -1,0 +1,23 @@
+.Info_box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+}
+
+.Info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &_logo {
+        max-width: 60%;
+        margin: -15px auto 50px auto
+    }
+
+    &_text {
+        color: #8b8e94;
+        line-height: 24px;
+        font-size: 15px;
+    }
+}
