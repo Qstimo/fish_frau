@@ -9,7 +9,7 @@ export const Info = () => {
         <div className={cls.Info_box}>
             <div className={cls.Info}>
                 <img className={cls.Info_logo} src={logo} alt="logo" />
-                <p className={cls.Info_text}>* * *</p>
+                <p className={cls.Info_separation}>* * *</p>
                 <p className={cls.Info_text}>Ресторан "Рыба" - одно из немногих мест в Ростове,
                     где можно вкусить все прелести рыбной кухни как местного,
                     донского направления, так и привозимых из зарубежья морепродуктов.
@@ -23,7 +23,9 @@ export const Info = () => {
                     создают расслабляющий чил-аут и лаунж
                     сеты от приглашенных диджеев.
                 </p>
-                <h3>ЗАБРОНИРОВАТЬ СТОЛИК</h3>
+                <div className={cls.Info_reservation}>
+                    <h3 className={cls.Info_reservation_item}>ЗАБРОНИРОВАТЬ СТОЛИК</h3>
+                </div>
             </div>
             <div className={cls.img}>
                 <img className={cls.img_item} src={decor} alt="decor" />
