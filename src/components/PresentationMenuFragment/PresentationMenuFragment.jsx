@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import cls from './PresentationMenuFragment.module.scss';
 
 

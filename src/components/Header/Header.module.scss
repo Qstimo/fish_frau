@@ -1,0 +1,195 @@
+.Header {
+    position: fixed;
+    width: 100%;
+    color: red;
+    z-index: 5;
+    transition: background 1s ease-in-out;
+
+    @media(min-width: 850px) {
+        background-color: transparent;
+        color: white;
+
+    }
+}
+
+.scroll {
+    background-color: white;
+    color: rgba(0, 0, 0, .7) !important;
+
+}
+
+.Header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    height: 50px;
+
+    @media(min-width: 850px) {
+        height: 100px;
+
+    }
+}
+
+.BtnClose {
+    width: 28px;
+    height: 20px;
+    position: relative;
+    z-index: 5;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+
+
+    span,
+    span::after,
+    span::before {
+        transition: all 0.5s ease-in-out;
+        content: '';
+        width: 100%;
+        background-color: #888888;
+        border-radius: 10px;
+        height: 3.5px;
+        display: block;
+        left: 0;
+        position: absolute;
+    }
+
+    span {
+        top: 0;
+    }
+
+    span::after {
+        top: 10px;
+    }
+
+    span::before {
+        top: 20px;
+    }
+
+    @media(min-width: 850px) {
+        display: none;
+    }
+}
+
+._active_btn {
+    span {
+        transform: rotate(45deg);
+        top: 10px;
+
+    }
+
+    span::after {
+        opacity: 0;
+        top: 10px;
+        width: 0%;
+        left: 50%;
+    }
+
+    span::before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+}
+
+
+
+.Navbar {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease-in-out;
+    z-index: 4;
+    top: 0;
+    left: -200px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+
+    ul {
+        padding: 0 30px;
+
+
+        li {
+            margin-bottom: 0px;
+            transition: margin 1s ease-in-out;
+            font-weight: 400;
+            text-transform: uppercase;
+
+
+        }
+    }
+
+    @media(min-width: 850px) {
+        left: auto;
+        background-color: transparent;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1 0 auto;
+        width: auto;
+        height: auto;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1 0 auto;
+            gap: 10px;
+
+            a {
+                padding: 20px 0;
+                transition: color 0.1s ease-in;
+                color: inherit;
+
+                &:hover {
+                    color: red;
+                }
+            }
+
+            li {
+                font-size: 15px;
+                font-weight: 400;
+                margin-bottom: 0px;
+                letter-spacing: normal;
+                color: inherit;
+            }
+
+        }
+    }
+}
+
+._active_nav {
+    width: 100%;
+    height: 100%;
+    padding: 45px 25px 0;
+    left: 0;
+
+    ul {
+        li {
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.header-btn {
+    display: none;
+
+    @media(min-width: 1139px) {
+        display: block;
+        font-weight: 400;
+        height: 40px;
+        padding: 4px 0px;
+        width: 255px;
+    }
+}
+
+.icon {
+    @media(min-width: 850px) {
+        display: none;
+    }
+}
