@@ -1,0 +1,50 @@
+.PresentationMenuFragment{
+    max-width: 585px;
+    max-height: 286px;
+    display: flex;
+}
+
+.img{
+    max-width: 292px;
+    max-height: 246px;
+    position: relative;
+    &_bloc{
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 14px solid var(--color-white);
+        position: absolute;
+        right: -5px;
+        top: 15px;
+        transform: rotate(-90deg);
+    }
+    &_blocReverce{
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 14px solid var(--color-white);
+        position: absolute;
+        top: 15px;
+        left: -6px;
+        transform: rotate(-270deg);
+    }
+    
+    &_item{
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+    }
+}
+
+.text{
+    background-color: var(--color-white);
+    max-width: 293px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 15px;
+    font-size: 15px;
+}

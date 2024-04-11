@@ -1,0 +1,10 @@
+.ParallaxTop {
+    max-width: 100%;
+    max-height: 660px;
+
+    &_img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+}

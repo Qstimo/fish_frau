@@ -1,0 +1,28 @@
+.PresentationMenu {
+    max-height: 1000px;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -58px;
+}
+
+.title {
+    color: var(--color-white);
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    position: absolute;
+    text-align: center;
+
+    &_top {
+        color: var(--color-red);
+        font-size: 60px;
+    }
+
+    &_bottom {
+        font-size: 50px;
+        line-height: 40px;
+        padding: 31px 0 0 0
+    }
+}
