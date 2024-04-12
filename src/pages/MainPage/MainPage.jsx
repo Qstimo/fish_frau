@@ -14,9 +14,12 @@ export const MainPage = () => {
     return (
         <div className={cls.MainPage} >
             <WindowImg />
-            <div className={cls.container}>
-                <Info />
-                <Chef />
+
+            <div className={cls.chefBack}>
+                <div className={cls.container}>
+                    <Info />
+                    <Chef />
+                </div>
             </div>
             <ParallaxTop />
             <div className={cls.backgroung}>
