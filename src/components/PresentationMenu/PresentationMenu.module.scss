@@ -1,5 +1,5 @@
 .PresentationMenu {
-    max-height: 1000px;
+    max-height: auto;
     min-height: 300px;
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +10,7 @@
 
 .title {
     color: var(--color-white);
-    top: -30%;
+    top: -231px;
     left: 50%;
     transform: translate(-50%, 50%);
     position: absolute;
@@ -26,4 +26,11 @@
         line-height: 40px;
         padding: 31px 0 0 0
     }
+}
+@media(max-width:926px){
+    .PresentationMenu {
+        position: relative;
+        top: 0;
+    }
+      
 }

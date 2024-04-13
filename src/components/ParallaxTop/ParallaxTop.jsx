@@ -15,7 +15,8 @@ const ParallaxTop = () => {
 
     return (
         <div  className={cls.ParallaxTop}>
-            <img style={{ transform: `translateY(${offSetY * 0.1}px)` }} className={cls.ParallaxTop_img} src={parallax} alt="parallax" />
+            {/* <img style={{ transform: `translateY(${offSetY * 0.3}px) scale(2) translateZ(-1px) ` }} className={cls.ParallaxTop_img} src={parallax} alt="parallax" /> */}
+            <div style={{ transform: `translateY(${offSetY * 0.3}px) scale(2) translateZ(-1px) ` }} className={cls.ParallaxTop_img}  alt="parallax" />
         </div>
     );
 };
