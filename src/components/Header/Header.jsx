@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import cls from './Header.module.scss'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/images/logo.svg'
+import Logo from './logo'
+
 
 export const classNames = (cls, mods = {}, additional= []) => {
   return [
@@ -21,23 +22,38 @@ const LinksHeader = [
 ]
 export const Header = () => {
     const [open, setOpen] = useState(false);
+
     const [isScrolled, setIsScrolled] = useState(false);
-    const handleScroll = ()=>{
-        setIsScrolled(window.scrollY > 30)
-    }
+
     useEffect(()=>{
         handleScroll();
         window.addEventListener('scroll', handleScroll)
         return ()=> window.removeEventListener('scroll', handleScroll)
     },[])
+
+    const handleScroll = ()=>{
+        setIsScrolled(window.scrollY > 30)
+    }
+
     const toglleNavbar = () => {
         setOpen(prev => !prev)
     }
+
+    const scrollTo = () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+          });
+    }
+
     return (
         <div className={classNames(cls.Header, { [cls.scroll]: isScrolled }, [])} >
             <div className="content">
                 <div className={cls.Header_container}>
-                  <img width={'60px'} height={'40px'} src={logo}/>
+                    <Link onClick={scrollTo} className={cls.Header_logo} to={'/'}>
+                        <Logo/>
+                    </Link>
                 <button onClick={toglleNavbar} className={classNames(cls.BtnClose, { [cls._active_btn]: open }, [])}>
                         <span></span>
                     </button>

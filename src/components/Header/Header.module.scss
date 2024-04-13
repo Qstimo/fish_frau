@@ -1,7 +1,6 @@
 .Header {
     position: fixed;
     width: 100%;
-    color: red;
     z-index: 5;
     transition: background 1s ease-in-out;
 
@@ -15,6 +14,7 @@
 .scroll {
     background-color: white;
     color: rgba(0, 0, 0, .7) !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .09);
 
 }
 
@@ -42,6 +42,14 @@
     cursor: pointer;
     transition: all 1s ease-in-out;
 
+    &:hover {
+
+        span,
+        span::after,
+        span::before {
+            background-color: var(--color-red);
+        }
+    }
 
     span,
     span::after,
@@ -49,12 +57,14 @@
         transition: all 0.5s ease-in-out;
         content: '';
         width: 100%;
-        background-color: #888888;
+        background-color: var(--color-grey);
         border-radius: 10px;
         height: 3.5px;
         display: block;
         left: 0;
         position: absolute;
+
+
     }
 
     span {
@@ -78,7 +88,6 @@
     span {
         transform: rotate(45deg);
         top: 10px;
-
     }
 
     span::after {
@@ -111,14 +120,17 @@
     ul {
         padding: 0 30px;
 
-
         li {
             margin-bottom: 0px;
             transition: margin 1s ease-in-out;
             font-weight: 400;
             text-transform: uppercase;
+            transition: letter-spacing 0.3s ease-in-out;
+            letter-spacing: 2px;
 
-
+            &:hover {
+                letter-spacing: 4px;
+            }
         }
     }
 
@@ -146,7 +158,7 @@
                 color: inherit;
 
                 &:hover {
-                    color: red;
+                    color: var(--color-red);
                 }
             }
 
@@ -154,8 +166,26 @@
                 font-size: 15px;
                 font-weight: 400;
                 margin-bottom: 0px;
-                letter-spacing: normal;
                 color: inherit;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    background-color: var(--color-red);
+                    width: 0;
+                    bottom: -1px;
+                    transition: width 0.3s ease-in;
+                }
+
+                &:hover {
+                    letter-spacing: 2px;
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
             }
 
         }
@@ -191,5 +221,18 @@
 .icon {
     @media(min-width: 850px) {
         display: none;
+    }
+}
+
+.Header_logo {
+    cursor: pointer;
+
+    &:hover {
+        svg {
+            g {
+
+                fill: var(--color-red);
+            }
+        }
     }
 }

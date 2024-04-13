@@ -1,8 +1,9 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+import React from 'react'
+
+const  Logo=()=> {
+  return (
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="735.000000pt" height="424.000000pt" viewBox="0 0 735.000000 424.000000"
+ width="60px" height="40px" viewBox="0 0 735.000000 424.000000"
  preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,424.000000) scale(0.100000,-0.100000)"
@@ -96,3 +97,8 @@ c20 -20 25 -20 68 -9 59 16 71 7 79 -63 12 -89 -14 -704 -30 -729 -26 -41 -28
 204 -26 247 72 26 61 27 113 2 166 -21 46 -54 79 -94 94 -32 13 -41 13 -80 1z"/>
 </g>
 </svg>
+
+  )
+}
+
+export default Logo
