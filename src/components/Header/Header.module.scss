@@ -108,7 +108,7 @@
 .Navbar {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.9);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
     z-index: 4;
     top: 0;
     left: -200px;
@@ -122,11 +122,10 @@
 
         li {
             margin-bottom: 0px;
-            transition: margin 1s ease-in-out;
+            transition: all 1s ease-in-out;
             font-weight: 400;
             text-transform: uppercase;
-            transition: letter-spacing 0.3s ease-in-out;
-            letter-spacing: 2px;
+            letter-spacing: normal;
 
             &:hover {
                 letter-spacing: 4px;
@@ -168,6 +167,7 @@
                 margin-bottom: 0px;
                 color: inherit;
                 position: relative;
+                letter-spacing: 2px;
 
                 &::before {
                     content: '';
@@ -201,7 +201,7 @@
     ul {
         li {
             margin-bottom: 20px;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
         }
     }
 }

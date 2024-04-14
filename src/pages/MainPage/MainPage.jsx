@@ -24,7 +24,7 @@ export const MainPage = () => {
             <ParallaxTop />
             <div className={cls.backgroung}>
                 <div className={cls.container}>
-                    <PresentationMenu />
+                    {/* <PresentationMenu /> */}
                 </div>
             </div>
         </div>
