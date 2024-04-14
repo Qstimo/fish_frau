@@ -5,6 +5,7 @@ import WindowImg from '../../components/WindowImg/WindowImg'
 import Chef from '../../components/ChefInfo/Chef'
 import ParallaxTop from '../../components/ParallaxTop/ParallaxTop'
 import PresentationMenu from '../../components/PresentationMenu/PresentationMenu'
+import Slider from '../../components/Slider'
 
 
 
@@ -27,6 +28,7 @@ export const MainPage = () => {
                     {/* <PresentationMenu /> */}
                 </div>
             </div>
+            <Slider />
         </div>
     )
 }

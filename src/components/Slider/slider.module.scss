@@ -1,0 +1,31 @@
+.Slider {}
+
+.Slider_content {
+    padding: 30px;
+}
+
+
+.Slider_title {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h3 {
+        color: #FF1A1E;
+        font-size: 60px;
+        letter-spacing: -5px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+
+    p {
+        text-transform: uppercase;
+        color: #red;
+        margin: 0;
+        padding: 0;
+        letter-spacing: .05em;
+        font-size: 50px;
+        position: relative;
+        font-weight: 700;
+        line-height: 40px;
+    }
+}
