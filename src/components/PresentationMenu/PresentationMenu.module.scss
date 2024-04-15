@@ -34,10 +34,39 @@
     }
 }
 
+
+@media(max-width:518px) {
+    .title {
+        &_top {
+            color: var(--color-red);
+            font-size: 46px;
+        }
+    
+        &_bottom {
+            font-size: 39px;
+            line-height: 14px;
+            padding: 31px 0 0 0
+        }
+    }
+
+}
 @media(max-width:500px) {
     .PresentationMenu {
         position: relative;
         top: 0;
+    }
+}
+@media(max-width:382px) {
+    .title {
+        &_top {
+            font-size: 46px;
+        }
+    
+        &_bottom {
+            font-size: 29px;
+            line-height: 14px;
+            padding: 31px 0 0 0
+        }
     }
 
 }
