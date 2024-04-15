@@ -1,0 +1,41 @@
+.ParallaxTop {
+    width: 100vw;
+    min-height: 437px;
+    position: relative;
+    perspective: 0px;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: -2;
+
+    &_img {
+        margin-top: -150px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: -1000px;
+    }
+
+    &_img::before {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        content: '';
+        display: block;
+        z-index: -1;
+        transform-origin: center;
+        min-height: 100vh;
+        background-size: cover;
+        transition: 1s;
+    }
+}
+.static{
+    display: none;
+}
+
+@media(max-width:1200px){
+    
+}

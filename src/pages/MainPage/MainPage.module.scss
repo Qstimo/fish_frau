@@ -4,9 +4,21 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
-.backgroung{
+
+.backgroung {
     background-color: #E4E4E4;
+    height: 100%;
 }
-.chefBack{
-    background-color:white;
+
+.chefBack {
+    background-color:var(--color-white);
+}
+
+@media(max-width:709px){
+    .container {
+        padding: 0 0px;
+    }
+    .backgroung {
+        background-color:var(--color-white);
+    }
 }

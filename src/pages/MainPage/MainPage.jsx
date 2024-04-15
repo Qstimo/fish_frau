@@ -3,9 +3,13 @@ import cls from './MainPage.module.scss'
 import { Info } from '../../components/Info/Info'
 import WindowImg from '../../components/WindowImg/WindowImg'
 import Chef from '../../components/ChefInfo/Chef'
-import ParallaxTop from '../../components/ParallaxTop/ParallaxTop'
 import PresentationMenu from '../../components/PresentationMenu/PresentationMenu'
 import Slider from '../../components/Slider'
+//img-parallax
+import background1 from '../../img/b4.png'
+import background2 from '../../img/b3.png'
+import Parallax from '../../components/ParallaxComponent/Parallax/Parallax'
+import ParallaxMain from '../../components/ParallaxComponent/ParallaxMain/ParallaxMain'
 
 
 
@@ -22,12 +26,14 @@ export const MainPage = () => {
                     <Chef />
                 </div>
             </div>
-            <ParallaxTop />
+            <Parallax background={background1} />
             <div className={cls.backgroung}>
                 <div className={cls.container}>
-                    {/* <PresentationMenu /> */}
+                    <PresentationMenu />
                 </div>
             </div>
+                <ParallaxMain background={background2} />
+
             <Slider />
         </div>
     )
