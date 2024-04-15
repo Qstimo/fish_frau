@@ -9,7 +9,7 @@ const PresentationMenu = () => {
         <div className={cls.PresentationMenu}>
             <div className={cls.title}>
                 <p className={cls.title_top}>Блюда</p>
-                <h4 className={cls.title_bottom}>ОТ ШЕФА</h4>
+                <p className={cls.title_bottom}>ОТ ШЕФА</p>
             </div>
             {
                 data.map((item, id) => (
