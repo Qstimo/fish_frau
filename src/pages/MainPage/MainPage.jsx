@@ -11,6 +11,7 @@ import background2 from '../../img/b3.png'
 import Parallax from '../../components/ParallaxComponent/Parallax/Parallax'
 import ParallaxMain from '../../components/ParallaxComponent/ParallaxMain/ParallaxMain'
 import Providing from '../../components/Providing/Providing'
+import AboutUs from '../../components/AboutUs'
 
 
 
@@ -35,8 +36,9 @@ export const MainPage = () => {
             </div>
             <ParallaxMain background={background1} />
             <div className={cls.container}>
-                <Providing/>
+                <Providing />
             </div>
+            <AboutUs />
             <Slider />
         </div>
     )

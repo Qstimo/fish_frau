@@ -26,6 +26,6 @@ export default function SwiperRender({ slides = [''] }) {
       >
         {slides.map(slide => <SwiperSlide key={slide} >“{slide}”</SwiperSlide>)}
       </Swiper>
-    </div>
+    </div >
   );
 }

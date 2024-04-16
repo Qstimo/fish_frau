@@ -1,5 +1,5 @@
 .swiper_container {
-    height: 200px;
+    height: 350px;
 
 }
 
@@ -10,7 +10,7 @@
 
 .swiper-slide {
     text-align: center;
-    padding: 0 30px 40px;
+    padding: 0 50px 20px;
     color: red;
     letter-spacing: .05em;
     font-size: 30px;
@@ -20,6 +20,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 768px) {
+        font-size: 22px;
+        padding: 0 10px 10px;
+
+    }
 }
 
 .swiper-slide img {
@@ -39,10 +45,12 @@
     border: 1px solid #bd161e;
 }
 
-.swiper-pagination-bullet-active {}
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
     color: #bd161e;
-    ;
+
+    @media (max-width:768px) {
+        display: none;
+    }
 }
