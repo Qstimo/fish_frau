@@ -10,6 +10,7 @@ import background1 from '../../img/b4.png'
 import background2 from '../../img/b3.png'
 import Parallax from '../../components/ParallaxComponent/Parallax/Parallax'
 import ParallaxMain from '../../components/ParallaxComponent/ParallaxMain/ParallaxMain'
+import Providing from '../../components/Providing/Providing'
 
 
 
@@ -26,14 +27,16 @@ export const MainPage = () => {
                     <Chef />
                 </div>
             </div>
-            <Parallax background={background1} />
+            <Parallax background={background2} />
             <div className={cls.backgroung}>
-                <div className={cls.container}>
+                <div className={cls.containerPresentationMenu}>
                     <PresentationMenu />
                 </div>
             </div>
-                <ParallaxMain background={background2} />
-
+            <ParallaxMain background={background1} />
+            <div className={cls.container}>
+                <Providing/>
+            </div>
             <Slider />
         </div>
     )

@@ -1,0 +1,70 @@
+.OrderOnline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 29px;
+}
+
+.OrderOnline_link {
+
+    background-image: linear-gradient(to right,
+            #54b3d6,
+            #fcfcfc 50%,
+            var(--color-white) 50%);
+    color: var(--color-white);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.OrderOnline_link:before {
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.OrderOnline_link:hover {
+    background-position: 0;
+}
+
+.OrderOnline_link:hover::before {
+    width: 100%;
+}
+
+@media(max-width:400px) {
+    .OrderOnline {
+        position: absolute;
+        top: 20%;
+
+        &_link {
+            text-decoration: none;
+            font-size: 26px;
+        }
+    }
+}
+
+@media(max-width:354px) {
+    .OrderOnline {
+        top: 20%;
+        left: 50%;
+
+        &_link {
+            font-size: 26px;
+        }
+    }
+}

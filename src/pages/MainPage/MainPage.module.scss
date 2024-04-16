@@ -4,7 +4,12 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
-
+.containerPresentationMenu{
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box
+}
 .backgroung {
     background-color: #E4E4E4;
     height: 100%;
@@ -15,7 +20,7 @@
 }
 
 @media(max-width:709px){
-    .container {
+    .containerPresentationMenu {
         padding: 0 0px;
     }
     .backgroung {
