@@ -2,6 +2,7 @@ import cls from './ParallaxMain.module.scss';
 // import parallax from '../../img/b4.png'
 import { useState } from 'react';
 import { useEffect } from 'react';
+import OrderOnline from '../../OrderOnline/OrderOnline';
 
 const ParallaxMain = ({ background }) => {
 
@@ -24,6 +25,7 @@ const ParallaxMain = ({ background }) => {
     
     return (
         <div className={cls.box}>
+            <OrderOnline/>
             <div className={cls.ParallaxTop}>
                 <img
                     style={{ transform: `translateY(${newHeigth * 3.5}px) scale(2) translateZ(-1px) ` }}

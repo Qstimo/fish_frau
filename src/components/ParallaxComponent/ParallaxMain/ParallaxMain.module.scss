@@ -36,6 +36,11 @@
     display: none;
 }
 
+.box{
+    position: relative;
+}
+
+
 @media(max-width:986px){
     .ParallaxTop_img{
         top: -3500px;
