@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    padding: 0 15px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 
     @media (max-width:768px) {
         display: grid;
@@ -14,6 +17,8 @@
     }
 
 }
+
+
 
 .AboutUs_item {
     max-width: 262px;

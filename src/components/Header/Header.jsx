@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom'
 import Logo from './logo'
 
 
-export const classNames = (cls, mods = {}, additional= []) => {
-  return [
-      cls,
-      ...additional.filter(Boolean),
-      ...Object.entries(mods)
-          .filter(([key, value]) => Boolean(value))
-          .map(([className]) => className)
-  ].join(' ')
+export const classNames = (cls, mods = {}, additional = []) => {
+    return [
+        cls,
+        ...additional.filter(Boolean),
+        ...Object.entries(mods)
+            .filter(([key, value]) => Boolean(value))
+            .map(([className]) => className)
+    ].join(' ')
 }
 
 const LinksHeader = [
@@ -25,13 +25,13 @@ export const Header = () => {
 
     const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(()=>{
+    useEffect(() => {
         handleScroll();
         window.addEventListener('scroll', handleScroll)
-        return ()=> window.removeEventListener('scroll', handleScroll)
-    },[])
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
-    const handleScroll = ()=>{
+    const handleScroll = () => {
         setIsScrolled(window.scrollY > 30)
     }
 
@@ -44,7 +44,7 @@ export const Header = () => {
             top: 0,
             left: 0,
             behavior: 'smooth',
-          });
+        });
     }
 
     return (
@@ -52,9 +52,9 @@ export const Header = () => {
             <div className="content">
                 <div className={cls.Header_container}>
                     <Link onClick={scrollTo} className={cls.Header_logo} to={'/'}>
-                        <Logo/>
+                        <Logo />
                     </Link>
-                <button onClick={toglleNavbar} className={classNames(cls.BtnClose, { [cls._active_btn]: open }, [])}>
+                    <button onClick={toglleNavbar} className={classNames(cls.BtnClose, { [cls._active_btn]: open }, [])}>
                         <span></span>
                     </button>
                     <div className={classNames(cls.Navbar, { [cls._active_nav]: open }, [])}>
@@ -66,7 +66,7 @@ export const Header = () => {
                             ))}
                         </ul>
                     </div>
-           
+
                 </div>
             </div>
         </div >
