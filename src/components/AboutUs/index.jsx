@@ -13,8 +13,8 @@ const AboutUs = () => {
         <div>
             <div className="content">
                 <div className={cls.AboutUs_content}>
-                    {aboutUsList.map(list => (
-                        <div className={cls.AboutUs_item}>
+                    {aboutUsList.map((list,i) => (
+                        <div key={i} className={cls.AboutUs_item}>
                             <h3>{list.title}</h3>
                             <p>{list.text}</p>
                         </div>
