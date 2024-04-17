@@ -26,10 +26,9 @@ body {
   max-width: 1200px;
   min-width: 350px;
   margin: 0 auto;
+  padding: 0 30px;
 
   @media (min-width: 700px) {
-    padding: 0 30px;
+    padding: 0 5px;
   }
-
-  padding: 0 18px;
 }

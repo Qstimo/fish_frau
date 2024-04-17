@@ -1,0 +1,52 @@
+.AboutUs_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (max-width:768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    @media (max-width:470px) {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.AboutUs_item {
+    max-width: 262px;
+    min-width: 150px;
+    height: 180px;
+    font-size: 25px;
+    box-shadow: 0.4em 0.4em 25px rgba(122, 122, 122, 0.5);
+    text-align: center;
+    flex: 1 1;
+    padding: 15px 5px;
+
+    @media (max-width:768px) {
+        max-width: 100%;
+        padding: 30px 5px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 55px;
+        font-family: "Marck Script", cursive;
+        font-weight: 400;
+        color: var(--color-red);
+        line-height: 1;
+        margin-bottom: 20px;
+
+        @media (max-width:1024px) {
+            font-size: 40px;
+        }
+    }
+
+    p {
+        @media (max-width:1024px) {
+            font-size: 20px;
+        }
+    }
+}
