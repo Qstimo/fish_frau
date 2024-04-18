@@ -15,10 +15,11 @@
     &_img {
         margin-top: -325px;
         position: absolute;
-        left: 0;
+        left: -40px;
         right: 0;
         bottom: 0;
         top: -3500px;
+        filter: brightness(0.8);
     }
 
     &_img::before {

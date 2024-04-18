@@ -28,15 +28,15 @@ const ParallaxMain = ({ background }) => {
             <OrderOnline/>
             <div className={cls.ParallaxTop}>
                 <img
-                    style={{ transform: `translateY(${newHeigth * 3.5}px) scale(2) translateZ(-1px) ` }}
+                    style={{ transform: `translateY(${newHeigth * 9}px) scale(2) translateZ(-1px) ` }}
                     className={cls.ParallaxTop_img}
                     alt="parallax"
                     src={background}
                 />
             </div>
-            <div className={cls.static}>
+            {/* <div className={cls.static}>
                 <img className={cls.static_img} src={background} alt="background" />
-            </div>
+            </div> */}
         </div>
     );
 };
