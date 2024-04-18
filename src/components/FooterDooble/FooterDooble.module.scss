@@ -1,0 +1,78 @@
+.Footer {
+    background-color: black;
+    padding: 45px 20px;
+
+    &_box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.adres {
+    
+    &_title {
+        font-size: 25px;
+        color: var(--color-white);
+        margin: 0 0 20px 0;
+    }
+
+    &_item {
+        font-size: 17px;
+        letter-spacing: 1px;
+        margin: 0 0 5px 0;
+    }
+
+    &_tel {
+        font-size: 17px;
+        letter-spacing: 1px;
+        margin: 0 0 5px 0;
+    }
+
+    &_email {
+        font-size: 17px;
+        letter-spacing: 1px;
+        margin: 0 0 5px 0;
+    }
+}
+
+.time {
+    &_title {
+        font-size: 25px;
+        color: var(--color-white);
+        margin: 0 0 20px 0;
+    }
+
+    &_box {
+        display: flex;
+    }
+}
+
+.weekdays {
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+}
+
+.weekend {
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin: 0 0 0 35px;
+}
+@media(max-width:700px){
+    .Footer {
+        background-color: black;
+        padding: 45px 0px;
+    
+        &_box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+
+        }
+    }
+    .adres {
+        margin: 0 0 40px 0;
+    }
+}

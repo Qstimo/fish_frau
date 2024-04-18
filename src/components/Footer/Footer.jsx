@@ -18,7 +18,10 @@ export const Footer = () => {
             <h3>{footerList.adres.title}</h3>
             <div>
               <p>{footerList.adres.text}</p>
-              <a className={cls.Footer_link} href={`tel:${footerList.adres.phone}`}>{footerList.adres.phone}</a>
+              <a className={cls.Footer_link} href={`tel:${footerList.adres.phone}`}>{footerList.adres.phone}</a><br/>
+              <a className={cls.Footer_link} href={`mailto:${footerList.reservations.email}`}>
+                {footerList.reservations.email}
+              </a>
             </div>
           </div>
 
@@ -37,7 +40,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className={cls.Footer_content_item}>
+          {/* <div className={cls.Footer_content_item}>
             <h3></h3>
             <div >
               <div className={cls.Footer_content_reservations_title}>
@@ -58,7 +61,7 @@ export const Footer = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
