@@ -1,0 +1,83 @@
+.ParallaxHeader {
+    width: 100vw;
+    min-height: 660px;
+    position: relative;
+    perspective: 0px;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: -2;
+
+    &_img {
+        margin-top: -150px;
+        position: absolute;
+        left: -176px;
+        right: 0;
+        bottom: 0;
+        top: 90px;
+        filter: brightness(0.8);
+    }
+
+    &_img::before {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        content: '';
+        display: block;
+        z-index: -1;
+        transform-origin: center;
+        min-height: 100vh;
+        background-size: cover;
+        transition: 1s;
+    }
+}
+.static{
+    display: none;
+}
+
+.box{
+    position: relative;
+}
+
+// @media(max-width:1200px){
+//     .ParallaxHeader_img{
+//         top: -4500px;
+//     }
+// }
+// @media(max-width:986px){
+//     .ParallaxHeader_img{
+//         top: -4500px;
+//     }
+// }
+// @media(max-width:938px){
+//     .ParallaxHeader_img{
+//         top: -7500px;
+//     }
+// }
+// @media(max-width:750px){
+//     .ParallaxHeader_img{
+//         top: -8000px;
+//     }
+// }
+// @media(max-width:527px){
+//     .ParallaxHeader_img{
+//         top: -7500px;
+//     }
+// }
+// @media(max-width:441px){
+//     .ParallaxHeader_img{
+//         top: -7000px;
+//     }
+// }
+// @media(max-width:400px){
+//     .ParallaxHeader_img{
+//         top: -7000px;
+//     }
+// }
+// @media(max-width:354px){
+//     .ParallaxHeader_img{
+//         top: -6500px;
+//     }
+// }

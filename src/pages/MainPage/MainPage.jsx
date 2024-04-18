@@ -1,7 +1,6 @@
 import React from 'react'
 import cls from './MainPage.module.scss'
 import { Info } from '../../components/Info/Info'
-import WindowImg from '../../components/WindowImg/WindowImg'
 import Chef from '../../components/ChefInfo/Chef'
 import PresentationMenu from '../../components/PresentationMenu/PresentationMenu'
 import Slider from '../../components/Slider'
@@ -10,10 +9,14 @@ import ParallaxMain from '../../components/ParallaxComponent/ParallaxMain/Parall
 import Providing from '../../components/Providing/Providing'
 import AboutUs from '../../components/AboutUs'
 import ParallaxBottom from '../../components/ParallaxComponent/ParallaxBottom/ParallaxBottom'
+import ParallaxHeader from '../../components/ParallaxComponent/ParallaxHeader/ParallaxHeader'
 //img-parallax
 import background1 from '../../img/b4.png'
 import background2 from '../../img/b3.png'
 import background3 from '../../img/hero_bg_5.jpg'
+import background4 from '../../img/vve3ewl8ebqxvpdd1166ku4z80bkdvqx.jpg'
+import background5 from '../../img/hero_bg_3.jpg'
+import ParallaxSlider from '../../components/ParallaxComponent/ParallaxSlider/ParallaxSlider'
 
 
 
@@ -21,7 +24,7 @@ import background3 from '../../img/hero_bg_5.jpg'
 export const MainPage = () => {
     return (
         <div className={cls.MainPage} >
-            <WindowImg />
+            <ParallaxHeader background={background4} />
 
             <div className={cls.chefBack}>
                 <div className={cls.container}>
@@ -39,9 +42,14 @@ export const MainPage = () => {
             <div className={cls.container}>
                 <Providing />
             </div>
-            <ParallaxBottom background={background3}/>
+            <ParallaxBottom background={background3} />
             <AboutUs />
-            <Slider />
+            <div className={cls.sliderBox}>
+                <ParallaxSlider background={background5} />
+                <div className={cls.sliderBox_slider}>
+                        <Slider />
+                </div>
+            </div>
         </div>
     )
 }

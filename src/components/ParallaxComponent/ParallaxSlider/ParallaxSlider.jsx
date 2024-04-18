@@ -1,9 +1,9 @@
-import cls from './Parallax.module.scss';
+import cls from './ParallaxSlider.module.scss'
 // import parallax from '../../img/b4.png'
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-const Parallax = ({ background }) => {
+const ParallaxSlider = ({ background }) => {
 
 
     const [offSetY, setOffSetY] = useState(100)
@@ -16,27 +16,24 @@ const Parallax = ({ background }) => {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
-    useEffect(() => { 
+    useEffect(() => {
         setNewHeigth(offSetY - 0.9 * offSetY)
     }, [offSetY])
 
 
-    
+
     return (
-        <div className={cls.box}>
-            <div className={cls.ParallaxTop}>
+        <>
+            <div className={cls.ParallaxSlider}>
                 <img
                     style={{ transform: `translateY(${newHeigth * 9}px) scale(2) translateZ(-1px) ` }}
-                    className={cls.ParallaxTop_img}
+                    className={cls.ParallaxSlider_img}
                     alt="parallax"
                     src={background}
                 />
             </div>
-            {/* <div className={cls.static}>
-                <img className={cls.static_img} src={background} alt="background" />
-            </div> */}
-        </div>
+        </>
     );
 };
 
-export default Parallax;
+export default ParallaxSlider;

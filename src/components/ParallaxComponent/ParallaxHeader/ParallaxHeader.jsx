@@ -1,9 +1,10 @@
-import cls from './Parallax.module.scss';
+import cls from './ParallaxHeader.module.scss';
 // import parallax from '../../img/b4.png'
 import { useState } from 'react';
 import { useEffect } from 'react';
+import OrderOnline from '../../OrderOnline/OrderOnline';
 
-const Parallax = ({ background }) => {
+const ParallaxHeader = ({ background }) => {
 
 
     const [offSetY, setOffSetY] = useState(100)
@@ -24,10 +25,10 @@ const Parallax = ({ background }) => {
     
     return (
         <div className={cls.box}>
-            <div className={cls.ParallaxTop}>
+            <div className={cls.ParallaxHeader}>
                 <img
                     style={{ transform: `translateY(${newHeigth * 9}px) scale(2) translateZ(-1px) ` }}
-                    className={cls.ParallaxTop_img}
+                    className={cls.ParallaxHeader_img}
                     alt="parallax"
                     src={background}
                 />
@@ -39,4 +40,4 @@ const Parallax = ({ background }) => {
     );
 };
 
-export default Parallax;
+export default ParallaxHeader;

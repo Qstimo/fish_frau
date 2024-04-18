@@ -13,10 +13,11 @@
     &_img {
         margin-top: -150px;
         position: absolute;
-        left: 0;
+        left: -25px;
         right: 0;
         bottom: 0;
-        top: -1400px;
+        top: -2800px;
+        filter: brightness(0.7);
     }
 
     &_img::before {
@@ -40,9 +41,43 @@
     position: relative;
 }
 
-
+@media(max-width:1200px){
+    .ParallaxTop_img{
+        top: -4500px;
+    }
+}
 @media(max-width:986px){
     .ParallaxTop_img{
-        top: -3500px;
+        top: -4500px;
+    }
+}
+@media(max-width:938px){
+    .ParallaxTop_img{
+        top: -7500px;
+    }
+}
+@media(max-width:750px){
+    .ParallaxTop_img{
+        top: -8000px;
+    }
+}
+@media(max-width:527px){
+    .ParallaxTop_img{
+        top: -7500px;
+    }
+}
+@media(max-width:441px){
+    .ParallaxTop_img{
+        top: -7000px;
+    }
+}
+@media(max-width:400px){
+    .ParallaxTop_img{
+        top: -7000px;
+    }
+}
+@media(max-width:354px){
+    .ParallaxTop_img{
+        top: -6500px;
     }
 }
