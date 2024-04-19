@@ -1,4 +1,5 @@
 import { Footer } from '../components/Footer/Footer';
+import FooterDooble from '../components/FooterDooble/FooterDooble';
 import { Header } from '../components/Header/Header';
 import { MainPage } from '../pages/MainPage/MainPage';
 import './styles/index.scss';
@@ -13,7 +14,8 @@ function App() {
           <Route path="/" element={<MainPage />} />
         </Routes>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
+      <FooterDooble />
     </div>
   );
 }

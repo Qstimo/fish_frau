@@ -38,9 +38,9 @@ const ParallaxBottom = ({ background }) => {
                     src={background}
                 />
             </div>
-            <div className={cls.static}>
+            {/* <div className={cls.static}>
                 <img className={cls.static_img} src={background} alt="background" />
-            </div>
+            </div> */}
         </>
     );
 };

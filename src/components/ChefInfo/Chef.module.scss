@@ -1,5 +1,5 @@
 .Chef {
-
+padding: 0 0 30px 0;
     &_box {
         display: flex;
         justify-content: center;
@@ -95,6 +95,9 @@
 }
 
 @media(max-width:720px) {
+    .Chef{
+        padding: 0 0 15px 0;
+    }
     .info {
         flex-wrap: wrap;
     }
