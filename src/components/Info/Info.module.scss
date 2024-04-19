@@ -34,17 +34,41 @@
     }
 
     &_reservation {
-        display: flex;
-        justify-content: center;
+        position: relative;
+        color: var(--color-black);
+        font-size: 15px;
+        padding-bottom: 5px;
+        cursor: pointer;
+        position: relative;
+        margin: 0 auto;
+        transition: color 600ms ease-in-out;
 
-        &_item {
-            color: var(--color-black);
-            font-size: 15px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid var(--color-black);
-            cursor: pointer;
-            max-width: 207px;
-            position: relative;
+
+        &::after,
+        &::before {
+            position: absolute;
+            content: '';
+            height: 2px;
+            background: black;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            transition: width 500ms ease-in-out;
+
+        }
+
+        &::before {
+            width: 0;
+            background-color: var(--color-deep-red);
+            z-index: 1;
+        }
+
+        &:hover {
+            color: var(--color-deep-red);
+
+            &::before {
+                width: 100%;
+            }
         }
 
     }
@@ -67,7 +91,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        max-width: 430px;
+        max-width: 100%;
 
         &_text {
             color: var(--color-grey);

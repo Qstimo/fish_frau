@@ -2,17 +2,10 @@ import React, { useEffect, useState } from 'react'
 import cls from './Header.module.scss'
 import { Link } from 'react-router-dom'
 import Logo from './logo'
+import { classNames } from '../../helpers/classnames'
 
 
-export const classNames = (cls, mods = {}, additional = []) => {
-    return [
-        cls,
-        ...additional.filter(Boolean),
-        ...Object.entries(mods)
-            .filter(([key, value]) => Boolean(value))
-            .map(([className]) => className)
-    ].join(' ')
-}
+
 
 const LinksHeader = [
     { name: 'БЛЮДА ОТ ШЕФА', link: '/' },

@@ -16,7 +16,6 @@ body {
   overflow: hidden;
 }
 
-// .content-page {}
 
 .page-wrapper {
   flex-grow: 1;
@@ -30,5 +29,13 @@ body {
 
   @media (min-width: 700px) {
     padding: 0 5px;
+  }
+}
+
+.modal-show {
+  @media (max-width:770px) {
+    height: 100vh;
+    overflow: hidden;
+    padding-right: 15px;
   }
 }

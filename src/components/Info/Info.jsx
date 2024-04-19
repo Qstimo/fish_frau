@@ -1,10 +1,25 @@
 import cls from './Info.module.scss'
 import logo from '../../img/logo.jpg'
 import decor from '../../img/img_2.jpg'
+import { useState } from 'react'
+import { Modal } from '../../ui/Modal'
+import { FormList } from './Form/form'
 
 
 
 export const Info = () => {
+    const [open, setOpen] = useState(false)
+
+    const toglleModal = () => {
+        setOpen(prev => !prev)
+        if (!open) {
+            document.body.classList.add('modal-show');
+        }
+        if (open) {
+            document.body.classList.remove('modal-show');
+        }
+    }
+
     return (
         <div className={cls.Info_box}>
             <div className={cls.Info}>
@@ -23,9 +38,12 @@ export const Info = () => {
                     создают расслабляющий чил-аут и лаунж
                     сеты от приглашенных диджеев.
                 </p>
-                <div className={cls.Info_reservation}>
-                    <h3 className={cls.Info_reservation_item}>ЗАБРОНИРОВАТЬ СТОЛИК</h3>
-                </div>
+                <button onClick={toglleModal} className={cls.Info_reservation}>
+                    ЗАБРОНИРОВАТЬ СТОЛИК
+                </button>
+                <Modal isOpen={open} onClose={toglleModal}>
+                    {/* <FormList /> */}
+                </Modal>
             </div>
             <div className={cls.img}>
                 <img className={cls.img_item} src={decor} alt="decor" />
