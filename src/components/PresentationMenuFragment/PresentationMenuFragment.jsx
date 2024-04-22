@@ -1,16 +1,32 @@
 import cls from './PresentationMenuFragment.module.scss';
-
+import { easeIn, motion } from 'framer-motion'
 
 const PresentationMenuFragment = (props) => {
     const { img, title, id, description } = props
 
-
-
-
     const shouldSwap = (id === 2 || id === 3 || id === 6 || id === 7);
 
+
+    const textAnimation = {
+        hidden: {
+            scale:0.5,
+            opacity: 0,
+        },
+        visible: (custom) => ({
+            scale:1,
+            opacity: 1,
+            transition: { easeIn, delay: custom * 0.3 }
+        }),
+    }
+
     return (
-        <div className={cls.box}>
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2, once: true }}
+            variants={textAnimation}
+            custom={id + 0.2}
+            className={cls.box}>
             <div className={cls.PresentationMenuFragment}>
                 {
                     shouldSwap ? (
@@ -49,7 +65,7 @@ const PresentationMenuFragment = (props) => {
                     </div>
                 </>
             </div >
-        </div>
+        </motion.div>
     );
 };
 

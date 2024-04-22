@@ -5,8 +5,11 @@ import PresentationMenuFragment from '../PresentationMenuFragment/PresentationMe
 
 const PresentationMenu = () => {
 
+
+
     return (
-        <div className={cls.PresentationMenu}>
+        <div 
+        className={cls.PresentationMenu}>
             <div className={cls.title}>
                 <p className={cls.title_top}>Блюда</p>
                 <p className={cls.title_bottom}>ОТ ШЕФА</p>

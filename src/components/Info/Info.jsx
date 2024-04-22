@@ -4,7 +4,7 @@ import decor from '../../img/img_2.jpg'
 import { useState } from 'react'
 import { Modal } from '../../ui/Modal'
 import { FormList } from './Form/form'
-import { easeIn, motion } from 'framer-motion'
+import {  motion } from 'framer-motion'
 
 
 
@@ -22,27 +22,14 @@ export const Info = () => {
     }
 
 
-    const textAnimation = {
-        hidden: {
-            y: 200,
-            opacity: 0
-        },
-        visible: (custom) => ({
-            y: 0,
-            opacity: 1,
-            transition: { easeIn, delay: custom * 0.6 }
-        }),
-    }
 
 
     return (
         <motion.div
             className={cls.Info_box}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.2, once: true }}
-            variants={textAnimation}
-            custom={1}
+            initial={{ opacity: 0, y:200 }}
+            animate={{ opacity: 1, y:0 }}
+            transition={{ duration: 0.5 }}
         >
             <div className={cls.Info}>
                 <img className={cls.Info_logo} src={logo} alt="logo" />

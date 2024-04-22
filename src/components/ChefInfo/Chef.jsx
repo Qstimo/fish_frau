@@ -1,9 +1,28 @@
 import cls from './Chef.module.scss'
 import chef from '../../img/1__7_.zndkD (1) — копия.jpg'
+import { easeIn, motion } from 'framer-motion'
 
 const Chef = () => {
+
+    const textAnimation = {
+        hidden: {
+            y: 200,
+            opacity: 0
+        },
+        visible: (custom) => ({
+            y: 0,
+            opacity: 1,
+            transition: { easeIn, delay: custom * 0.3 }
+        }),
+    }
     return (
-        <div className={cls.Chef}>
+        <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+        variants={textAnimation}
+        custom={2}
+        className={cls.Chef}>
             <div className={cls.Chef_box}>
                 <div className={cls.Chef_dots}>* * *</div>
                 <div className={cls.Chef_title}>
@@ -39,7 +58,7 @@ const Chef = () => {
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -5,11 +5,28 @@ import img3 from '../../img/best3.png'
 import img4 from '../../img/best4.png'
 import img5 from '../../img/best5.png'
 import img6 from '../../img/best6.png'
-
+import { easeIn, motion } from 'framer-motion'
 
 const Providing = () => {
+
+    const textAnimation = {
+        hidden: {
+            opacity: 0
+        },
+        visible: (custom) => ({
+            opacity: 1,
+            transition: { easeIn, delay: custom * 0.3 }
+        }),
+    }
+
     return (
-        <div className={cls.Providing}>
+        <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.2, once: true }}
+        variants={textAnimation}
+        custom={1}
+        className={cls.Providing}>
             <div className={cls.box}>
                 <div className={cls.advantages}>
                     <p className={cls.advantages_text}>ДЕТСКАЯ ИГРОВАЯ ЗОНА</p>
@@ -52,7 +69,7 @@ const Providing = () => {
                     <img className={`${cls.advantages_img} ${cls.marginRight}`} src={img6} alt="img6" />
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

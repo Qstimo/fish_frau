@@ -1,5 +1,7 @@
 import React from 'react'
 import cls from './aboutUs.module.scss'
+import { easeIn, motion } from 'framer-motion'
+
 
 const aboutUsList = [
     { title: 'более 40', text: "видов рыб" },
@@ -9,17 +11,38 @@ const aboutUsList = [
 ]
 
 const AboutUs = () => {
+
+    const textAnimation = {
+        hidden: {
+            y: 200,
+            opacity: 0
+        },
+        visible: (custom) => ({
+            y: 0,
+            opacity: 1,
+            transition: { easeIn, delay: custom * 0.3 }
+        }),
+    }
+
     return (
         <div>
             <div className="content">
-                <div className={cls.AboutUs_content}>
-                    {aboutUsList.map((list,i) => (
-                        <div key={i} className={cls.AboutUs_item}>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    className={cls.AboutUs_content}>
+                    {aboutUsList.map((list, i) => (
+                        <motion.div
+                            viewport={{ amount: 0.2, once: true }}
+                            variants={textAnimation}
+                            custom={i + 0.5}
+
+                            key={i} className={cls.AboutUs_item}>
                             <h3>{list.title}</h3>
                             <p>{list.text}</p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
     )
