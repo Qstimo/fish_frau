@@ -17,6 +17,7 @@ import background3 from '../../img/hero_bg_5.jpg'
 import background4 from '../../img/vve3ewl8ebqxvpdd1166ku4z80bkdvqx.jpg'
 import background5 from '../../img/hero_bg_3.jpg'
 import ParallaxSlider from '../../components/ParallaxComponent/ParallaxSlider/ParallaxSlider'
+import WindowImg from '../../components/WindowImg/WindowImg'
 
 
 
@@ -24,8 +25,8 @@ import ParallaxSlider from '../../components/ParallaxComponent/ParallaxSlider/Pa
 export const MainPage = () => {
     return (
         <div className={cls.MainPage} >
-            <ParallaxHeader background={background4} />
-
+            {/* <ParallaxHeader background={background4} /> */}
+            <WindowImg />
             <div className={cls.chefBack}>
                 <div className={cls.container}>
                     <Info />
@@ -47,7 +48,7 @@ export const MainPage = () => {
             <div className={cls.sliderBox}>
                 <ParallaxSlider background={background5} />
                 <div className={cls.sliderBox_slider}>
-                        <Slider />
+                    <Slider />
                 </div>
             </div>
         </div>

@@ -10,7 +10,10 @@ import './swiper.scss';
 
 import { Pagination, Navigation } from 'swiper/modules';
 
+
+
 export default function SwiperRender({ slides = [''] }) {
+  
   return (
     <div className='swiper_container'>
       <Swiper

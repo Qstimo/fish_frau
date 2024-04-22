@@ -10,7 +10,8 @@
 }
 
 .adres {
-    
+    padding: 0 20px;
+
     &_title {
         font-size: 25px;
         color: var(--color-white);
@@ -37,6 +38,8 @@
 }
 
 .time {
+    padding: 0 20px;
+
     &_title {
         font-size: 25px;
         color: var(--color-white);
@@ -59,11 +62,12 @@
     letter-spacing: 1px;
     margin: 0 0 0 35px;
 }
-@media(max-width:700px){
+
+@media(max-width:749px) {
     .Footer {
         background-color: black;
         padding: 45px 0px;
-    
+
         &_box {
             display: flex;
             justify-content: center;
@@ -72,7 +76,17 @@
 
         }
     }
+
     .adres {
         margin: 0 0 40px 0;
+    }
+}
+@media(max-width:360px) {
+    
+    .adres {
+        padding: 0 0;
+    }
+    .time{
+        padding: 0 0;
     }
 }

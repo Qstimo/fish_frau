@@ -1,6 +1,6 @@
 .ParallaxTop {
     width: 100vw;
-    min-height: 437px;
+    min-height: 550px;
     position: relative;
     perspective: 0px;
     transform-style: preserve-3d;
@@ -17,7 +17,7 @@
         right: 0;
         bottom: 0;
         top: -1500px;
-        filter: brightness(0.8);
+        filter: brightness(0.6);
     }
 
     &_img::before {
