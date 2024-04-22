@@ -15,7 +15,7 @@ const PresentationMenuFragment = (props) => {
         visible: (custom) => ({
             scale:1,
             opacity: 1,
-            transition: { easeIn, delay: custom * 0.3 }
+            transition: { easeIn, delay: custom * 0.3,duration: 0.4 }
         }),
     }
 

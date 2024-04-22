@@ -4,7 +4,7 @@ import decor from '../../img/img_2.jpg'
 import { useState } from 'react'
 import { Modal } from '../../ui/Modal'
 import { FormList } from './Form/form'
-import {  motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 
@@ -27,9 +27,9 @@ export const Info = () => {
     return (
         <motion.div
             className={cls.Info_box}
-            initial={{ opacity: 0, y:200 }}
-            animate={{ opacity: 1, y:0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 200 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
         >
             <div className={cls.Info}>
                 <img className={cls.Info_logo} src={logo} alt="logo" />
