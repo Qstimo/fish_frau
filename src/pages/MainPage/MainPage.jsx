@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cls from './MainPage.module.scss'
 import { Info } from '../../components/Info/Info'
 import Chef from '../../components/ChefInfo/Chef'
@@ -18,11 +18,23 @@ import background4 from '../../img/vve3ewl8ebqxvpdd1166ku4z80bkdvqx.jpg'
 import background5 from '../../img/hero_bg_3.jpg'
 import ParallaxSlider from '../../components/ParallaxComponent/ParallaxSlider/ParallaxSlider'
 import WindowImg from '../../components/WindowImg/WindowImg'
+import { useDispatch } from 'react-redux'
+import { fetchDataMenu } from '../../redux/Slice/SliceMenu/SliceMenu'
+import { fetchDataBar } from '../../redux/Slice/SliceBar/SliceBar'
 
 
 
 
 export const MainPage = () => {
+
+const dispatch = useDispatch()
+
+useEffect(()=>{
+dispatch(fetchDataMenu())
+dispatch(fetchDataBar())
+},[])
+
+
     return (
         <div className={cls.MainPage} >
             {/* <ParallaxHeader background={background4} /> */}
