@@ -7,28 +7,23 @@ import axios from 'axios'
 
 
 
-export const fetchDataBar = createAsyncThunk('Bar/fetchDataBar', async () => {
-    try {
-        const { data } = await axios.get('https://6626bd55b625bf088c068351.mockapi.io/api/riba')
-        return data
-    } catch (error) {
-        throw new Error(error)
-    }
+export const fetchDataBar = createAsyncThunk('bar/fetchDataBar', async () => {
+    const { data } = await axios.get('https://6626bd55b625bf088c068351.mockapi.io/api/riba')
+    return data
+
 })
-
-
-
 
 
 const initialState = {
     data: [],
+    status: "loading"
 
 }
 
 const SliceBar = createSlice({
-    name: 'Bar',
+    name: 'bar',
     initialState,
-    status: '',
+    reducers:{},
     extraReducers: (builder) => {
         builder.addCase(fetchDataBar.pending, (state, action) => {
             state.data = [];
@@ -46,5 +41,5 @@ const SliceBar = createSlice({
 })
 
 
-export const { } = SliceBar.actions
-export const barReduser = SliceBar.reducer
+export const selectBarData = (state) => state.bar;
+export const barReducer = SliceBar.reducer

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import cls from './Header.module.scss'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Logo from './logo'
 import { classNames } from '../../helpers/classnames'
 
@@ -8,14 +8,14 @@ import { classNames } from '../../helpers/classnames'
 
 
 const LinksHeader = [
-    { name: 'БЛЮДА ОТ ШЕФА', link: '/' },
-    { name: 'МЕНЮ', link: '/' },
-    { name: 'БРОНЬ', link: '/' },
-    { name: 'ПРЕИМУЩЕСТВА', link: '/' },
+    { name: 'БЛЮДА ОТ ШЕФА', link: '/chef' },
+    { name: 'МЕНЮ', link: '/menu/bar' },
+    { name: 'БРОНЬ', link: '/br' },
+    { name: 'ПРЕИМУЩЕСТВА', link: '/value' },
 ]
 export const Header = () => {
     const [open, setOpen] = useState(false);
-
+    const { pathname } = useLocation();
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -39,9 +39,13 @@ export const Header = () => {
             behavior: 'smooth',
         });
     }
+    const mods = {
+        [cls.scroll]: isScrolled, 
+        [cls.menu]: pathname.includes('menu') 
+        };
 
     return (
-        <div className={classNames(cls.Header, { [cls.scroll]: isScrolled }, [])} >
+        <div className={classNames(cls.Header, mods , [])} >
             <div className="content">
                 <div className={cls.Header_container}>
                     <Link onClick={scrollTo} className={cls.Header_logo} to={'/'}>
@@ -54,7 +58,7 @@ export const Header = () => {
                         <ul >
                             {LinksHeader.map(link =>
                             (<Link key={link.name} to={link.link}>
-                                <li >{link.name}</li>
+                                <li  className={classNames('', {[cls.activeLink]: pathname.includes(link.link)}, [])}>{link.name}</li>
                             </Link>
                             ))}
                         </ul>

@@ -1,7 +1,7 @@
-import { Footer } from '../components/Footer/Footer';
 import FooterDooble from '../components/FooterDooble/FooterDooble';
 import { Header } from '../components/Header/Header';
 import { MainPage } from '../pages/MainPage/MainPage';
+import { MenuPage } from '../pages/MenuPage/MenuPage';
 import './styles/index.scss';
 import { Route, Routes } from 'react-router-dom';
 
@@ -13,8 +13,10 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
         </Routes>
+        <Routes>
+          <Route path="/menu/:type" element={<MenuPage />} />
+        </Routes>
       </div>
-      {/* <Footer/> */}
       <FooterDooble />
     </div>
   );

@@ -12,12 +12,14 @@
 }
 
 .scroll {
-    background-color: white;
+    background-color: white !important;
     color: rgba(0, 0, 0, .7) !important;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .09);
 
 }
-
+.menu{
+    background-color: rgba(0, 0, 0, 0.10);
+}
 .Header_container {
     display: flex;
     justify-content: space-between;
@@ -143,6 +145,19 @@
         flex: 1 0 auto;
         width: auto;
         height: auto;
+
+        .activeLink{
+            color: var(--color-red);
+            &::before {
+                content: '';
+                position: absolute;
+                height: 2px;
+                background-color: var(--color-red);
+                width: 100%;
+                bottom: -1px;
+                transition: width 0.3s ease-in;
+            }
+        }
 
         ul {
             display: flex;
