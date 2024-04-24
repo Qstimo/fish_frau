@@ -6,6 +6,8 @@ import {
   fetchDataBar,
   selectBarData,
 } from "./../../redux/Slice/SliceBar/SliceBar";
+import { color } from "framer-motion";
+import { classNames } from './../../helpers/classnames';
 const items = [
   {
     title: "white wine",
@@ -37,17 +39,19 @@ export const RenderMenu = ({ category }) => {
   return (
     <div className="">
       <h3 className={cls.Render_category_title}>{category.title}</h3>
-      {category.items.map((e, i) => (
+      {category.items && category.items.map((e, i) => (
         <div key={i} className="">
-          <h4  className={cls.Render_category_subtitle}>{e.title}</h4>
+          <div className={cls.Render_category_subtitle}>
+            <span>{e.title}</span>
+          </div>
           <div className={cls.Render_item_container}>
             {e.items.map((elem, index) => (
               <div className={cls.Render_item} key={index}>
                 <div className="">
-                <h5 className={cls.Render_item_title}>{elem.name}</h5>
-                <hr />
-                <span className={cls.Render_item_text}>{elem.taste}</span>
-                <span className={cls.Render_item_text}>{elem.country}</span>
+                  <h5 className={cls.Render_item_title}>{elem.name}</h5>
+                  <hr />
+                  <span className={cls.Render_item_text}>{elem.taste}</span>
+                  <span className={cls.Render_item_text}>{elem.country}</span>
                 </div>
                 <div className="">
                   <p className={cls.Render_item_price}>{elem.volume}</p>
@@ -90,10 +94,15 @@ export const MenuPage = () => {
     <div className={cls.MenuPage}>
       <WindowImg />
       <div className="content">
-        <div className={cls.MenuPage_tabList}>
+        <div className={cls.Tabllist}>
           {!loading &&
             tabList.map((item) => (
-              <p onClick={() => setTab(item.index)} key={item.title}>
+              <p
+                className={classNames(cls.Tablist_item,{[cls.Tablist_item_active] : item.index === tab})}
+                onClick={() => setTab(item.index)}
+                key={item.title}
+               
+              >
                 {item.title}
               </p>
             ))}

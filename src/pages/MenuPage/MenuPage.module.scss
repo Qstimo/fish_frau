@@ -1,61 +1,86 @@
 .MenuPage {
     background-color: rgba(255, 255, 255, 0.15);
     color: black;
-padding-bottom: 50px;}
+    padding-bottom: 50px;
+}
 
 .MenuPage_firstScreen {
     height: 500px;
 }
 
-.MenuPage_tabList {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-    color: black;
-    padding: 30px 0px;
 
-    p {
-        cursor: pointer;
+.Tabllist {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--color-grey);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+    row-gap: 10px;
+    
+
+}
+
+.Tablist_item {
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: color 0.3s ease-in-out ;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    &:hover{
+        color: black;
     }
+
+}
+
+.Tablist_item_active {
+    color: black;
 }
 
 .Render_item {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    span{
+
+    span {
         margin-right: 5px;
     }
 }
+
 .Render_category_title {
     font-size: 28px;
     letter-spacing: 2px;
 }
+
 .Render_category_subtitle {
-    padding: 15px 0;
+    padding: 20px 0;
     font-size: 24px;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     text-align: center;
     position: relative;
-    z-index: 1;
-    &::after,
-    &::before{
+
+    &::before {
         content: '';
         height: 3px;
         background-color: black;
         position: absolute;
         left: 0;
-        bottom: 22px;
-        right: 60%;
-        z-index: 0;
-    }
-    &::after{
+        bottom: 28px;
         right: 0;
-        left: 60%;
+        z-index: -1;
     }
 
+    span {
+        z-index: 2;
+        background-color: white;
+        padding: 10px;
+    }
+
+
 }
+
 .Render_item_title {
     font-size: 18px;
 }
