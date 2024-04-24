@@ -1,11 +1,10 @@
 .PresentationMenu {
-    height: auto;
+    height: 847px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
     top: -58px;
     justify-content: center;
-    // max-height: 844px;
 }
 
 .title {
@@ -28,11 +27,16 @@
     }
 }
 
-@media(max-width:1200px) {
+@media(max-width:1201px) {
     .PresentationMenu {
         height: auto;
     }
 }
+// @media(max-width:1200px) {
+//     .PresentationMenu {
+//         height: auto;
+//     }
+// }
 
 
 @media(max-width:518px) {
