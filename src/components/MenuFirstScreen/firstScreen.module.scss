@@ -1,0 +1,62 @@
+.MenuFirstScreen {
+    padding-top: 80px;
+    height: 100vh;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.MenuFirstScreen_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    @media (max-width:768px) {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+.MenuFirstScreen_bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: black;
+img{
+    scale: 1.6;
+}
+
+}
+
+.Tabllist {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--color-grey);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+    row-gap: 10px;
+    z-index: 2;
+    position: relative;
+
+}
+
+.Tablist_item {
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: color 0.3s ease-in-out;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &:hover {
+        color: var(--color-white);
+    }
+
+}
+
+.Tablist_item_active {
+    color: var(--color-white);
+}

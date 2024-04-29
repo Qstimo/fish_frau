@@ -43,7 +43,9 @@ dispatch(fetchDataBar())
 
     return (
         <div className={cls.MainPage} >
-            <WindowImg img={imghome} adaptiv={adaptivhome}/>
+           <div className={cls.MainPage_fs}>
+           <WindowImg img={imghome} adaptiv={adaptivhome}/>
+           </div>
             <div className={cls.chefBack}>
                 <div className={cls.container}>
                     <Info />
@@ -61,7 +63,7 @@ dispatch(fetchDataBar())
                 <Providing />
             </div>
             <ParallaxBottom background={background3} />
-            <AboutUs />
+            {/* <AboutUs /> */}
             <div className={cls.sliderBox}>
                 <ParallaxSlider background={background5} />
                 <div className={cls.sliderBox_slider}>

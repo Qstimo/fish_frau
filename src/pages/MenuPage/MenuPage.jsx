@@ -1,41 +1,12 @@
 import React, { useEffect, useState } from "react";
-import cls from "./MenuPage.module.scss";
-import WindowImg from "./../../components/WindowImg/WindowImg";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchDataBar,
   selectBarData,
 } from "./../../redux/Slice/SliceBar/SliceBar";
-import { color } from "framer-motion";
-import { classNames } from './../../helpers/classnames';
 import { RenderMenu } from "../../components/RenderMenu";
-import backgroung from '../../img/2147905759.jpg'
-const items = [
-  {
-    title: "white wine",
-    items: [
-      {
-        title: "citrus",
-        items: [
-          {
-            name: "Турень Совиньон Валле де Рэн",
-            taste: "сухое",
-            country: "Франция",
-            volume: "750мл",
-            price: "3800р",
-          },
-          {
-            name: "Гави Миньянего",
-            taste: "сухое",
-            country: "Италия",
-            volume: "750мл",
-            price: "3700р",
-          },
-        ],
-      },
-    ],
-  },
-];
+import { MenuFirstScreen } from "../../components/MenuFirstScreen";
+
 
 
 export const MenuPage = () => {
@@ -62,24 +33,9 @@ export const MenuPage = () => {
   };
 
   return (
-    <div className={cls.MenuPage}>
-      <WindowImg img={backgroung} />
-      <div className="content">
-        <div className={cls.Tabllist}>
-          {!loading &&
-            tabList.map((item) => (
-              <p
-                className={classNames(cls.Tablist_item, { [cls.Tablist_item_active]: item.index === tab })}
-                onClick={() => setTab(item.index)}
-                key={item.title}
-
-              >
-                {item.title}
-              </p>
-            ))}
-        </div>
-        {!loading && renderMenu(data, tab)}
-      </div>
+    <div>
+      <MenuFirstScreen loading={loading} tabList={tabList} tab={tab} setTab={setTab} />
+      {!loading && renderMenu(data, tab)}
     </div>
   );
 };

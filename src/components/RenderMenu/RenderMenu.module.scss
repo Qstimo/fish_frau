@@ -1,9 +1,13 @@
+.RenderMenu{
+    color: black;
+}
+
 .Render_item {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px 0;
 
-    span {
+    span:first-child {
         margin-right: 5px;
     }
 }
@@ -36,13 +40,14 @@
         left: 0;
         bottom: 28px;
         right: 0;
-        z-index: -1;
+        z-index: 0;
     }
 
     span {
         z-index: 2;
-        background-color: white;
+        background-color: #fef9f4;
         padding: 10px;
+        position: relative;
     }
 
 
@@ -50,15 +55,11 @@
 
 .Render_item_title {
     font-size: 18px;
+    padding: 5px 0;
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
         font-size: 16px;
     }
-
-    @media (max-width: 550px) {
-        font-size: 14px;
-    }
-
 }
 
 .Render_item_text {
@@ -71,20 +72,20 @@
     gap: 20px;
     font: var(--font-l);
 
-    @media (max-width: 900px) {
-        font-size: 16px;
-    }
 
-    @media (max-width: 840px) {
+
+    @media (max-width: 768px) {
         grid-template-columns: 1fr;
     }
 
-    @media (max-width: 550px) {
-        font-size: 14px;
-    }
 }
 
 .Render_item_price {
     color: black;
     font-weight: 500;
+    display: flex;
+
+    p {
+        padding: 0 3px;
+    }
 }
