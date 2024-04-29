@@ -1,11 +1,11 @@
 import cls from './WindowImg.module.scss';
 
 
-const WindowImg = () => {
+const WindowImg = ({img,adaptiv}) => {
     return (
         <div className={cls.WindowImg} >
-            <div className={cls.WindowImg_img}></div>
-
+            <img className={cls.WindowImg_img} src={img} alt='img' />
+            <img className={cls.WindowImg_avaptiv} src={adaptiv} alt='avaptiv'/>
         </div>
     );
 };

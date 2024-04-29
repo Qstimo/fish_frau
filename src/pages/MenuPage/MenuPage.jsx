@@ -9,6 +9,7 @@ import {
 import { color } from "framer-motion";
 import { classNames } from './../../helpers/classnames';
 import { RenderMenu } from "../../components/RenderMenu";
+import backgroung from '../../img/2147905759.jpg'
 const items = [
   {
     title: "white wine",
@@ -62,16 +63,16 @@ export const MenuPage = () => {
 
   return (
     <div className={cls.MenuPage}>
-      <WindowImg />
+      <WindowImg img={backgroung} />
       <div className="content">
         <div className={cls.Tabllist}>
           {!loading &&
             tabList.map((item) => (
               <p
-                className={classNames(cls.Tablist_item,{[cls.Tablist_item_active] : item.index === tab})}
+                className={classNames(cls.Tablist_item, { [cls.Tablist_item_active]: item.index === tab })}
                 onClick={() => setTab(item.index)}
                 key={item.title}
-               
+
               >
                 {item.title}
               </p>

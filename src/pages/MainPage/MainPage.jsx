@@ -14,8 +14,14 @@ import ParallaxHeader from '../../components/ParallaxComponent/ParallaxHeader/Pa
 import background1 from '../../img/b4.png'
 import background2 from '../../img/b3.png'
 import background3 from '../../img/hero_bg_5.jpg'
-import background4 from '../../img/vve3ewl8ebqxvpdd1166ku4z80bkdvqx.jpg'
 import background5 from '../../img/hero_bg_3.jpg'
+
+
+
+
+import imghome from '../../img/vve3.jpg'
+import adaptivhome from '../../img/IMG_2912-3.jpg'
+
 import ParallaxSlider from '../../components/ParallaxComponent/ParallaxSlider/ParallaxSlider'
 import WindowImg from '../../components/WindowImg/WindowImg'
 import { useDispatch } from 'react-redux'
@@ -37,8 +43,7 @@ dispatch(fetchDataBar())
 
     return (
         <div className={cls.MainPage} >
-            {/* <ParallaxHeader background={background4} /> */}
-            <WindowImg />
+            <WindowImg img={imghome} adaptiv={adaptivhome}/>
             <div className={cls.chefBack}>
                 <div className={cls.container}>
                     <Info />

@@ -33,9 +33,6 @@ const ParallaxHeader = ({ background }) => {
                     src={background}
                 />
             </div>
-            {/* <div className={cls.static}>
-                <img className={cls.static_img} src={background} alt="background" />
-            </div> */}
         </div>
     );
 };
