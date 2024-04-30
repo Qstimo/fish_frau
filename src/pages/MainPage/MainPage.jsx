@@ -27,32 +27,40 @@ import WindowImg from '../../components/WindowImg/WindowImg'
 import { useDispatch } from 'react-redux'
 import { fetchDataMenu } from '../../redux/Slice/SliceMenu/SliceMenu'
 import { fetchDataBar } from '../../redux/Slice/SliceBar/SliceBar'
+import { Element } from 'react-scroll'
+import { LINKS } from '../../config'
 
 
 
 
 export const MainPage = () => {
 
-const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-useEffect(()=>{
-dispatch(fetchDataMenu())
-dispatch(fetchDataBar())
-},[])
+    useEffect(() => {
+        dispatch(fetchDataMenu())
+        dispatch(fetchDataBar())
+    }, [])
 
 
     return (
         <div className={cls.MainPage} >
-           <div className={cls.MainPage_fs}>
-           <WindowImg img={imghome} adaptiv={adaptivhome}/>
-           </div>
+            <div className={cls.MainPage_fs}>
+                <WindowImg img={imghome} adaptiv={adaptivhome} />
+            </div>
             <div className={cls.chefBack}>
                 <div className={cls.container}>
-                    <Info />
+                    <Element name={LINKS.RESERVATION}>
+                        <Info />
+                    </Element>
+
                     <Chef />
+
                 </div>
             </div>
-            <Parallax background={background2} />
+            <Element name={LINKS.CHEF} >
+                <Parallax background={background2} />
+            </Element>
             <div className={cls.backgroung}>
                 <div className={cls.containerPresentationMenu}>
                     <PresentationMenu />
@@ -62,8 +70,10 @@ dispatch(fetchDataBar())
             <div className={cls.container}>
                 <Providing />
             </div>
-            <ParallaxBottom background={background3} />
-            {/* <AboutUs /> */}
+            <Element name={LINKS.ADVANTAGES}>
+                <ParallaxBottom background={background3} />
+                <AboutUs />
+            </Element>
             <div className={cls.sliderBox}>
                 <ParallaxSlider background={background5} />
                 <div className={cls.sliderBox_slider}>

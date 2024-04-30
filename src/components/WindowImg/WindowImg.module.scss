@@ -6,6 +6,7 @@
     top: 0;
     bottom: 0;
     z-index: 0;
+
     &_img {
         bottom: 0;
         top: 0;
@@ -25,9 +26,11 @@
         margin-bottom: 50px;
     }
 }
-.WindowImg_img_menu{
+
+.WindowImg_img_menu {
     background-color: black;
 }
+
 // @media(max-width:725px) {
 //     .WindowImg {
 //         width: 100%;

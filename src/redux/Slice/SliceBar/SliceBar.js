@@ -7,8 +7,8 @@ import axios from 'axios'
 
 
 
-export const fetchDataBar = createAsyncThunk('bar/fetchDataBar', async () => {
-    const { data } = await axios.get('https://6626bd55b625bf088c068351.mockapi.io/api/riba')
+export const fetchDataBar = createAsyncThunk('bar/fetchDataBar', async (menu='bar') => {
+    const { data } = await axios.get(`https://6626bd55b625bf088c068351.mockapi.io/api/${menu}`)
     return data
 
 })

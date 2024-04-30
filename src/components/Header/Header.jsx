@@ -3,16 +3,13 @@ import cls from './Header.module.scss'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from './logo'
 import { classNames } from '../../helpers/classnames'
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import {LinksHeader } from '../../config'
 
 
 
 
-const LinksHeader = [
-    { name: 'БЛЮДА ОТ ШЕФА', link: '/chef' },
-    { name: 'МЕНЮ', link: '/menu/bar' },
-    { name: 'БРОНЬ', link: '/br' },
-    { name: 'ПРЕИМУЩЕСТВА', link: '/value' },
-]
+
 export const Header = () => {
     const [open, setOpen] = useState(false);
     const { pathname } = useLocation();
@@ -39,28 +36,56 @@ export const Header = () => {
             behavior: 'smooth',
         });
     }
+
+    const scrollToLink = () => {
+        setOpen(() => false)
+        scrollTo()
+    }
+    const isMenu = pathname.includes('menu')
+
+    useEffect(() => {
+
+    }, [pathname])
+
     const mods = {
-        [cls.scroll]: isScrolled, 
-        [cls.menu]: pathname.includes('menu') 
-        };
+        [cls.scroll]: isScrolled,
+        [cls.menu]: isMenu,
+    };
 
     return (
-        <div className={classNames(cls.Header, mods , [])} >
+        <div className={classNames(cls.Header, mods, [])} >
             <div className="content">
                 <div className={cls.Header_container}>
-                    <Link onClick={scrollTo} className={cls.Header_logo} to={'/'}>
-                        <Logo />
+                    <Link onClick={scrollTo} className={classNames(cls.Header_logo, { [cls.scroll_logo]: isScrolled }, [])} to={'/'}>
+                        <Logo className={classNames(cls.Logo, { [cls.scroll_logo]: isScrolled }, [])} />
                     </Link>
                     <button onClick={toglleNavbar} className={classNames(cls.BtnClose, { [cls._active_btn]: open }, [])}>
                         <span></span>
                     </button>
                     <div className={classNames(cls.Navbar, { [cls._active_nav]: open }, [])}>
                         <ul >
-                            {LinksHeader.map(link =>
-                            (<Link key={link.name} to={link.link}>
-                                <li  className={classNames('', {[cls.activeLink]: pathname.includes(link.link)}, [])}>{link.name}</li>
-                            </Link>
-                            ))}
+                            {LinksHeader.map(link => {
+                                if (link.links) {
+                                    return (
+                                        link.links.map((item) =>
+                                            <Link onClick={scrollToLink} key={item.name} to={item.link}>
+                                                <li className={classNames('', { [cls.activeLink]: pathname.includes(item.link) }, [])}>{item.name}</li>
+                                            </Link>)
+                                    )
+                                }
+                                return (!isMenu &&
+                                    <ScrollLink key={link.link} to={link.link} onClick={() => setOpen(false)} smooth={true} duration={500}>
+                                        <li>
+                                            {link.name}
+                                        </li>
+                                    </ScrollLink>)
+
+                            }
+                            )}
+                            {isMenu &&
+                                <Link onClick={scrollToLink} to={"/"}>
+                                    <li>На главную</li>
+                                </Link>}
                         </ul>
                     </div>
 

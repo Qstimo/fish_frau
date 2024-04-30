@@ -17,9 +17,12 @@
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .09);
 
 }
-.menu{
+
+
+.menu {
     background-color: rgba(0, 0, 0, 0.10);
 }
+
 .Header_container {
     display: flex;
     justify-content: space-between;
@@ -118,7 +121,9 @@
     height: 0;
     overflow: hidden;
     padding: 0;
-
+    a{
+        cursor: pointer;
+    }
     ul {
         padding: 0 30px;
 
@@ -146,8 +151,9 @@
         width: auto;
         height: auto;
 
-        .activeLink{
+        .activeLink {
             color: var(--color-red);
+
             &::before {
                 content: '';
                 position: absolute;
@@ -241,13 +247,27 @@
 
 .Header_logo {
     cursor: pointer;
+    svg {
+        g {
 
+            fill: white;
+        }
+    }
     &:hover {
         svg {
             g {
 
                 fill: var(--color-red);
             }
+        }
+    }
+}
+
+.scroll_logo {
+    svg {
+        g {
+
+            fill: black;
         }
     }
 }

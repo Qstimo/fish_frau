@@ -1,5 +1,8 @@
 .RenderMenu{
     color: black;
+    background-color: #fef9f4;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .Render_item {
@@ -41,6 +44,7 @@
         bottom: 28px;
         right: 0;
         z-index: 0;
+        border-radius: 5px;
     }
 
     span {

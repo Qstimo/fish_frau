@@ -1,8 +1,7 @@
 .MenuFirstScreen {
     padding-top: 80px;
-    height: 100vh;
     position: relative;
-    margin-bottom: 50px;
+    height: 100vh;
 }
 
 .MenuFirstScreen_container {
@@ -17,19 +16,17 @@
 }
 
 .MenuFirstScreen_bg {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background-color: black;
-img{
-    scale: 1.6;
-}
+
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 
 }
 
 .Tabllist {
+    margin-top: 100px;
     font-size: 16px;
     font-weight: normal;
     color: var(--color-grey);
@@ -41,6 +38,11 @@ img{
     z-index: 2;
     position: relative;
 
+    @media (max-width:768px) {
+        max-width: 500px;
+        margin: 50px auto 0;
+    }
+
 }
 
 .Tablist_item {
@@ -50,6 +52,8 @@ img{
     transition: color 0.3s ease-in-out;
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: var(--color-grey);
+
 
     &:hover {
         color: var(--color-white);

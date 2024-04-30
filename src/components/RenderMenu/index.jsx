@@ -1,6 +1,7 @@
 import React from 'react'
 import cls from './RenderMenu.module.scss'
 import { useLocation } from 'react-router-dom';
+import { Element } from 'react-scroll';
 
 export const RenderMenu = ({ category }) => {
 const  getPrice = (price) => {
@@ -17,13 +18,13 @@ const renderVolume = volume =>{
 }
 
   return (
-   <div className={cls.RenderMenu}>
+   <Element name="menuList" className={cls.RenderMenu}>
      <div className="content">
       <h3 className={cls.Render_category_title}>{category.title}</h3>
       {category.items && category.items.map((e, i) => (
         <div key={i} className="">
           <div className={cls.Render_category_subtitle}>
-            <span>{e.title}</span>
+           {e.title && <span>{e.title}</span>}
           </div>
           <div className={cls.Render_item_container}>
             {e.items.map((elem, index) => (
@@ -49,6 +50,6 @@ const renderVolume = volume =>{
         </div>
       ))}
     </div>
-   </div>
+   </Element>
   );
 };

@@ -1,5 +1,10 @@
 import cls from "./firstScreen.module.scss";
+import { Link, Element, animateScroll as scroll } from "react-scroll";
 
+
+// <Element name="section1" className="element">
+//   Содержимое раздела 1
+// </Element>
 
 import { classNames } from './../../helpers/classnames';
 import WindowImg from "../WindowImg/WindowImg";
@@ -17,18 +22,21 @@ export const MenuFirstScreen = ({ loading, tabList, tab, setTab }) => {
             </div>
             <div className="content">
                 <div className={cls.MenuFirstScreen_container}>
-                    <div></div>
+                    <div>
+
+                    </div>
                     <div className={cls.Tabllist}>
                         {!loading &&
                             tabList.map((item) => (
-                                <p
-                                    className={classNames(cls.Tablist_item, { [cls.Tablist_item_active]: item.index === tab })}
-                                    onClick={() => setTab(item.index)}
+                                <Link
+                                    to="menuList" smooth={true} duration={500}
+                                    onClick={() => setTab(()=>item.index)}
                                     key={item.title}
-
                                 >
-                                    {item.title}
-                                </p>
+                                    <span className={classNames(cls.Tablist_item, { [cls.Tablist_item_active]: item.index === tab })}>
+                                        {item.title}
+                                    </span>
+                                </Link>
                             ))}
                     </div>
                 </div>

@@ -6,6 +6,7 @@ import {
 } from "./../../redux/Slice/SliceBar/SliceBar";
 import { RenderMenu } from "../../components/RenderMenu";
 import { MenuFirstScreen } from "../../components/MenuFirstScreen";
+import { useLocation } from "react-router-dom";
 
 
 
@@ -13,11 +14,14 @@ export const MenuPage = () => {
   const dispatch = useDispatch();
 
   const [tab, setTab] = useState(0);
-
+  const { pathname } = useLocation()
   useEffect(() => {
-    dispatch(fetchDataBar());
-    console.log(data, status);
-  }, []);
+    if (pathname.includes('kitchen')) {
+      dispatch(fetchDataBar('kitchen'));
+    } else {
+      dispatch(fetchDataBar("bar"));
+    }
+  }, [pathname]);
 
   const { data, status } = useSelector(selectBarData);
 
