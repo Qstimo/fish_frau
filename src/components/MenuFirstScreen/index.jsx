@@ -8,17 +8,22 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 import { classNames } from './../../helpers/classnames';
 import WindowImg from "../WindowImg/WindowImg";
-import bg from '../../img/menuBg.jpg'
+import bg from '../../img/top-view-cocktail-essentials-with-lime-copy-space (1).jpg'
+import bgMenu from '../../img/flat-lay-delicious-smoked-fish-plate.png'
+import { useLocation } from "react-router-dom";
 
 
 
 export const MenuFirstScreen = ({ loading, tabList, tab, setTab }) => {
 
-
+    const { pathname } = useLocation();
+    console.log(pathname)
     return (
         <div className={cls.MenuFirstScreen}>
             <div className={cls.MenuFirstScreen_bg}>
-                <WindowImg img={bg} />
+                {
+                    pathname === '/menu/bar' ? <WindowImg img={bg} /> : <WindowImg img={bgMenu} />
+                }
             </div>
             <div className="content">
                 <div className={cls.MenuFirstScreen_container}>
@@ -30,7 +35,7 @@ export const MenuFirstScreen = ({ loading, tabList, tab, setTab }) => {
                             tabList.map((item) => (
                                 <Link
                                     to="menuList" smooth={true} duration={500}
-                                    onClick={() => setTab(()=>item.index)}
+                                    onClick={() => setTab(() => item.index)}
                                     key={item.title}
                                 >
                                     <span className={classNames(cls.Tablist_item, { [cls.Tablist_item_active]: item.index === tab })}>
