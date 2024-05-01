@@ -1,5 +1,5 @@
 import cls from "./firstScreen.module.scss";
-import { Link, Element, animateScroll as scroll } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
 // <Element name="section1" className="element">

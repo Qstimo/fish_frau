@@ -50,13 +50,13 @@ export const Info = () => {
                 <button onClick={toglleModal} className={cls.Info_reservation}>
                     ЗАБРОНИРОВАТЬ СТОЛИК
                 </button>
-                <Modal isOpen={open} onClose={toglleModal}>
-                    {/* <FormList /> */}
-                </Modal>
             </div>
             <div className={cls.img}>
                 <img className={cls.img_item} src={decor} alt="decor" />
             </div>
+            <Modal isOpen={open} onClose={toglleModal}>
+                <FormList />
+            </Modal>
         </motion.div>
     )
 }

@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 import Logo from './logo'
 import { classNames } from '../../helpers/classnames'
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import {LinksHeader } from '../../config'
+import { LinksHeader } from '../../config'
 
 
 
