@@ -8,8 +8,8 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 import { classNames } from './../../helpers/classnames';
 import WindowImg from "../WindowImg/WindowImg";
-import bg from '../../img/top-view-cocktail-essentials-with-lime-copy-space (1).jpg'
-import bgMenu from '../../img/flat-lay-delicious-smoked-fish-plate.png'
+import bg from '../../img/top-view-cocktail-essentials-with-lime-copy-space (1).webp'
+import bgMenu from '../../img/photoeditorsdk-export (1).webp'
 import { useLocation } from "react-router-dom";
 
 
@@ -17,12 +17,11 @@ import { useLocation } from "react-router-dom";
 export const MenuFirstScreen = ({ loading, tabList, tab, setTab }) => {
 
     const { pathname } = useLocation();
-    console.log(pathname)
     return (
         <div className={cls.MenuFirstScreen}>
             <div className={cls.MenuFirstScreen_bg}>
                 {
-                    pathname === '/menu/bar' ? <WindowImg img={bg} /> : <WindowImg img={bgMenu} />
+                    pathname === '/menu/bar' ? <WindowImg img={bg} adaptiv={bg} /> : <WindowImg img={bgMenu} adaptiv={bgMenu}/>
                 }
             </div>
             <div className="content">

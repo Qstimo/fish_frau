@@ -15,6 +15,8 @@
         background-repeat: no-repeat;
         position: absolute;
         object-fit: cover;
+        width: 100%;
+        height: 633px;
     }
 
     &_avaptiv {
@@ -29,6 +31,29 @@
 
 .WindowImg_img_menu {
     background-color: black;
+}
+
+@media(max-width:877px) {
+    .WindowImg {
+        width: 100%;
+
+        &_img {
+            display: none;
+        }
+
+        &_avaptiv {
+            display: block;
+            width: 100%;
+            // height: 620px;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-repeat: no-repeat;
+            position: absolute;
+            object-fit: cover;
+        }
+    }
 }
 
 // @media(max-width:725px) {
