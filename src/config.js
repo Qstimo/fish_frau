@@ -16,5 +16,5 @@ export const LinksHeader = [
         ]
     },
     { name: 'БРОНЬ', link: LINKS.RESERVATION },
-    { name: 'ПРЕИМУЩЕСТВА', link: LINKS.ADVANTAGES },
+
 ]

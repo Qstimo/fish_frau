@@ -2,9 +2,7 @@ import cls from "./firstScreen.module.scss";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 
-// <Element name="section1" className="element">
-//   Содержимое раздела 1
-// </Element>
+
 
 import { classNames } from './../../helpers/classnames';
 import WindowImg from "../WindowImg/WindowImg";

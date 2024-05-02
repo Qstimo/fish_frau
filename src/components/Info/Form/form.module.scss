@@ -1,8 +1,55 @@
-.Form{
+.Form {
     margin: 0 auto;
     background-color: white;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .09);
 
+}
+
+.Form_list_container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.Form_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @media (max-width:768px) {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    @media (max-width:500px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.Form_list_field {
+    position: relative;
+}
+
+.Form_list_field_erorr {
+    position: absolute;
+    border: -5px;
+    font-size: 12px;
+    color: var(--color-red);
+}
+
+.Form_list_input {
+    height: 40px;
+    border-radius: 3px;
+    padding: 8px 16px;
+    outline: 1px solid var(--color-grey);
+    border: none;
+    position: relative;
+    width: 100%;
+
+    &:focus {
+        outline: 1px solid var(--color-red);
+    }
 }
