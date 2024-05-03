@@ -11,16 +11,7 @@ const ANIMATION_DELAY = 200;
 export const Modal = ({
     className = "", children, isOpen, onClose,
 }) => {
-    // const toglleNavbar = () => {
-    //     setOpen(prev => !prev)
-    //     if (!open) {
-    //         document.body.classList.add('modal-show');
-    //     }
-    //     if (open) {
-    //         document.body.classList.remove('modal-show');
-    //     }
-    // }
-
+    
     const [isClousing, setIsClousing] = React.useState(false);
 
     const timeRef = React.useRef();
@@ -71,6 +62,7 @@ export const Modal = ({
                         className={cls.content}
                         onClick={onContentClick}
                     >
+                    <span className={cls.content_close_btn}onClick={onClose}></span>
                         {children}
                     </div>
                 </div>

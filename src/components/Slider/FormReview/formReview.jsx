@@ -19,29 +19,18 @@ export const FormList = ({ initialValues, initialValuesList, title }) => {
             initialValues={initialValues}
             validate={values => {
                 const errors = {};
-
-                if (!values.guests || values.guests < 1) {
-                    errors.guests = 'Пожалуйста, заполните поле';
+                if (!values.email) {
+                    errors.email = 'Пожалуйста, введите ваше email';
+                } else if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                ) {
+                    errors.email = 'Не правильный email';
                 }
-
-                if (!values.date) {
-                    errors.date = 'Пожалуйста, заполните дату';
-                } else if (new Date(values.date) < new Date()) {
-                    errors.date = 'Дата не может быть раньше текущей';
-                }
-
-                if (!values.time) {
-                    errors.time = 'Пожалуйста, заполните время';
-                } else if (new Date().setHours(0, 0, 0, 0) > new Date(values.time).setHours(0, 0, 0, 0)) {
-                    errors.time = 'Время не может быть раньше текущего';
-                }
-
-                if (!values.phone || !/^\+?[0-9]{7,15}$/.test(values.phone)) {
-                    errors.phone = 'Не корректный номер телефона';
-                }
-
                 if (!values.name) {
                     errors.name = 'Пожалуйста, введите ваше имя';
+                }
+                if (!values.textarea) {
+                    errors.textarea = 'Пожалуйста, введите ваш отзыв';
                 }
 
                 return errors;
@@ -59,13 +48,14 @@ export const FormList = ({ initialValues, initialValuesList, title }) => {
                 <Form className={cls.Form_list_container}>
                     <h3>{title}</h3>
                     <div className={cls.Form_list}>
-                        {Object.entries(initialValuesList).map(([key, { placeholder, title }]) => (
+                        {Object.entries(initialValuesList).map(([key, { placeholder, title, styles, component }]) => (
                             <div key={key} className={cls.Form_list_field}>
                                 <p>{title}</p>
-                                <Field className={cls.Form_list_input} value={initialValues.key} placeholder={placeholder} type={key} name={key} />
+                                <Field style={styles} className={cls.Form_list_input} component={component} value={initialValues.key} placeholder={placeholder} type={key} name={key} />
                                 <ErrorMessage className={cls.Form_list_field_erorr} name={key} component="div" />
                             </div>))
                         }
+
                     </div>
                     <Button type="submit" disabled={isSubmitting}>
                         Отправить

@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { Modal } from '../../ui/Modal'
 import { FormList } from './Form/form'
 import { motion } from 'framer-motion'
+import { initialReservationValues, initialValuesReservationList } from '../../config'
 
 
 
@@ -12,6 +13,7 @@ export const Info = () => {
     const [open, setOpen] = useState(false)
 
     const toglleModal = () => {
+        console.log('click')
         setOpen(prev => !prev)
         if (!open) {
             document.body.classList.add('modal-show');
@@ -54,8 +56,8 @@ export const Info = () => {
             <div className={cls.img}>
                 <img className={cls.img_item} src={decor} alt="decor" />
             </div>
-            <Modal isOpen={open} onClose={toglleModal}>
-                <FormList />
+            <Modal isOpen={open} onClose={toglleModal} title={'Забронировать стол'}>
+                <FormList initialValues={initialReservationValues} initialValuesList={initialValuesReservationList} />
             </Modal>
         </motion.div>
     )

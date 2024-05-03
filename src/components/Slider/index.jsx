@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Swiper from './swiper/Swiper'
 import SwiperRender from './swiper/Swiper'
 import cls from './slider.module.scss'
 import { Button } from '../../ui/Button'
+import { Modal } from '../../ui/Modal'
+import { initialReviewValues, initialValuesReviewList } from '../../config'
+import { FormList } from './FormReview/formReview'
 const slidesList = [
     "Ваша кухня как раз мне по вкусу - люблю морепродукты во всех видах",
     "Летом вернется. Ждем предложения на день семьи, любви и верности.",
@@ -12,6 +15,18 @@ const slidesList = [
 ]
 
 function Slider() {
+    const [open, setOpen] = useState(false)
+
+    const toglleModal = () => {
+        setOpen(prev => !prev)
+        if (!open) {
+            document.body.classList.add('modal-show');
+        }
+        if (open) {
+            document.body.classList.remove('modal-show');
+        }
+    }
+
     return (
         <div className={cls.Slider}>
             <div className='content'>
@@ -21,11 +36,14 @@ function Slider() {
                         <p>посетителей</p>
                     </div>
                     <SwiperRender slides={slidesList} />
-                    <div className={cls.Slider_btn_container}>
-                        <Button>Оставить отзыв</Button>
+                    <div onClick={toglleModal} className={cls.Slider_btn_container}>
+                        <Button >Оставить отзыв</Button>
                     </div>
                 </div>
             </div>
+            <Modal isOpen={open} onClose={toglleModal}>
+                <FormList initialValues={initialReviewValues} initialValuesList={initialValuesReviewList} title={"Есть вопросы? Напишите нам!"}/>
+            </Modal>
         </div>
     )
 }
