@@ -8,7 +8,7 @@ import { Button } from '../../../ui/Button';
 
 export const FormList = ({ initialValues, initialValuesList, title }) => {
     const [send, setSend] = useState(null)
-
+    
     if (send) {
         return <div className={cls.send_container}>
             <h3>Успешно отправленно!</h3>

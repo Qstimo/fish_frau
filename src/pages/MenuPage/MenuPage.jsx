@@ -7,6 +7,7 @@ import {
 import { RenderMenu } from "../../components/RenderMenu";
 import { MenuFirstScreen } from "../../components/MenuFirstScreen";
 import { useLocation } from "react-router-dom";
+import { Loader } from "../../ui/Loader";
 
 
 
@@ -35,11 +36,18 @@ export const MenuPage = () => {
   const renderMenu = (arayItems, indexTab) => {
     return <RenderMenu category={arayItems[indexTab]} />;
   };
-
+  console.log(loading)
   return (
     <div>
-      <MenuFirstScreen loading={loading} tabList={tabList} tab={tab} setTab={setTab} />
-      {!loading && renderMenu(data, tab)}
+
+      {!loading
+        ? <>
+          <MenuFirstScreen loading={loading} tabList={tabList} tab={tab} setTab={setTab} />
+          {renderMenu(data, tab)}
+          <MenuFirstScreen loading={loading} tabList={tabList} tab={tab} setTab={setTab} />
+        </>
+        : <Loader/>
+      }
     </div>
   );
 };
