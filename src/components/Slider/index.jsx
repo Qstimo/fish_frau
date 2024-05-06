@@ -20,9 +20,11 @@ function Slider() {
     const toglleModal = () => {
         setOpen(prev => !prev)
         if (!open) {
+            document.body.style.overflow = 'hidden'
             document.body.classList.add('modal-show');
         }
         if (open) {
+            document.body.style.overflow = 'auto'
             document.body.classList.remove('modal-show');
         }
     }
@@ -42,7 +44,7 @@ function Slider() {
                 </div>
             </div>
             <Modal isOpen={open} onClose={toglleModal}>
-                <FormList initialValues={initialReviewValues} initialValuesList={initialValuesReviewList} title={"Есть вопросы? Напишите нам!"}/>
+                <FormList initialValues={initialReviewValues} initialValuesList={initialValuesReviewList} title={"Есть вопросы? Напишите нам!"} />
             </Modal>
         </div>
     )

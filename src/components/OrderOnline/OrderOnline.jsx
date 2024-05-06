@@ -5,8 +5,11 @@ import cls from './OrderOnline.module.scss';
 const OrderOnline = () => {
     return (
         <div className={cls.OrderOnline}>
-            {/* <div className={cls.OrderOnline_title}>Сделать заказ онлайн</div> */}
-            <Link className={cls.OrderOnline_link} to=''> Посмотреть фото блюд и сделать заказ</Link>
+            <Link
+                className={cls.OrderOnline_link}
+                to='https://xn--e1ane2e.xn--80aaco5bemccfl7i.xn--p1ai'
+                target="_blank"
+            > Посмотреть фото блюд и сделать заказ</Link>
         </div>
     );
 };

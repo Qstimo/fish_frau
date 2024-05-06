@@ -36,6 +36,7 @@ export const FormList = ({ initialValues, initialValuesList, title }) => {
                 return errors;
             }}
             onSubmit={(values, { setSubmitting }) => {
+                console.log(values)
                 setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));
                     setSubmitting(false);

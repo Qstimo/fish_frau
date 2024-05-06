@@ -13,12 +13,13 @@ export const Info = () => {
     const [open, setOpen] = useState(false)
 
     const toglleModal = () => {
-        console.log('click')
         setOpen(prev => !prev)
         if (!open) {
+            document.body.style.overflow = 'hidden'
             document.body.classList.add('modal-show');
         }
         if (open) {
+            document.body.style.overflow = 'auto'
             document.body.classList.remove('modal-show');
         }
     }

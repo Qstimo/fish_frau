@@ -11,7 +11,7 @@ const ANIMATION_DELAY = 200;
 export const Modal = ({
     className = "", children, isOpen, onClose,
 }) => {
-    
+
     const [isClousing, setIsClousing] = React.useState(false);
 
     const timeRef = React.useRef();
@@ -62,7 +62,7 @@ export const Modal = ({
                         className={cls.content}
                         onClick={onContentClick}
                     >
-                    <span className={cls.content_close_btn}onClick={onClose}></span>
+                        <span className={cls.content_close_btn} onClick={onClose}></span>
                         {children}
                     </div>
                 </div>
