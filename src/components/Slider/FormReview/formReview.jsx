@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import cls from './form.module.scss'
 import { Button } from '../../../ui/Button';
+import { useDispatch } from 'react-redux';
+import { fetchModalreview } from '../../../redux/Slice/SliceModalReview/SliceModalReview';
 
 
 
 
 export const FormList = ({ initialValues, initialValuesList, title }) => {
     const [send, setSend] = useState(null)
-    
+    const dispatch = useDispatch()
+
     if (send) {
         return <div className={cls.send_container}>
             <h3>Успешно отправленно!</h3>
@@ -36,9 +39,9 @@ export const FormList = ({ initialValues, initialValuesList, title }) => {
                 return errors;
             }}
             onSubmit={(values, { setSubmitting }) => {
-                console.log(values)
                 setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
+                    // alert(JSON.stringify(values, null, 2));
+                    dispatch(fetchModalreview(values))
                     setSubmitting(false);
                     setSend(true)
                 }, 400);
