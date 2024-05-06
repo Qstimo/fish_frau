@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export const api = 'https://back-rocked.vercel.app';
+export const api = 'https://fish-frau-api.vercel.app';
 
 const instanse = axios.create({
     baseURL: api
