@@ -66,7 +66,9 @@ export const MainPage = () => {
                     <PresentationMenu />
                 </div>
             </div>
-            <ParallaxMain background={background1} />
+            <Element name ={LINKS.ORDER}>
+                <ParallaxMain background={background1} />
+            </Element >
             <div className={cls.container}>
                 <Providing />
             </div>

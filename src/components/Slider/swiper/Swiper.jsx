@@ -24,10 +24,10 @@ export default function SwiperRender({ slides = [''] }) {
         pagination={{
           clickable: true,
         }}
-      //   autoplay={{
-      //     delay: 2500,
-      //     disableOnInteraction: false,
-      // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+      }}
         navigation={true}
         modules={[Autoplay,Pagination, Navigation]}
         className="mySwiper"

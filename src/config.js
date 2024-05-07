@@ -3,7 +3,8 @@ export const LINKS = {
     KITCHEN: "/menu/kitchen",
     RESERVATION: "reservation",
     ADVANTAGES: "advantages",
-    CHEF: "chef"
+    CHEF: "chef",
+    ORDER: "ORDER"
 
 }
 export const LinksHeader = [
@@ -16,6 +17,7 @@ export const LinksHeader = [
         ]
     },
     { name: 'БРОНЬ', link: LINKS.RESERVATION },
+    { name: 'ЗАКАЗАТЬ', link: LINKS.ORDER },
 
 ]
 export const initialValuesReservationList = {
