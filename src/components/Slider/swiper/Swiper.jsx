@@ -2,18 +2,19 @@ import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import './swiper.scss';
 
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation,Autoplay } from 'swiper/modules';
 
 
 
 export default function SwiperRender({ slides = [''] }) {
-  
+
   return (
     <div className='swiper_container'>
       <Swiper
@@ -23,8 +24,12 @@ export default function SwiperRender({ slides = [''] }) {
         pagination={{
           clickable: true,
         }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+      }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay,Pagination, Navigation]}
         className="mySwiper"
       >
         {slides.map(slide => <SwiperSlide key={slide} >“{slide}”</SwiperSlide>)}

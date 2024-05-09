@@ -2,17 +2,23 @@ import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import cls from './form.module.scss'
 import { Button } from '../../../ui/Button';
+import { useDispatch } from 'react-redux';
+import { fetchModalreservation } from '../../../redux/Slice/SliceModalReservation/SliceModalReservation';
 
 
 
 
 export const FormList = ({ initialValues, initialValuesList, title }) => {
     const [send, setSend] = useState(null)
+<<<<<<< HEAD
     useEffect(()=>{
         return ()=>{
             setSend(null)
         }
     },[])
+=======
+    const dispatch =useDispatch()
+>>>>>>> c59b58d639b64a7898403d354597392a827c4a2a
 
     if (send) {
         return <div className={cls.send_container}>
@@ -53,7 +59,8 @@ export const FormList = ({ initialValues, initialValuesList, title }) => {
             }}
             onSubmit={(values, { setSubmitting }) => {
                 setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
+                    // alert(JSON.stringify(values, null, 2));
+                    dispatch(fetchModalreservation(values))
                     setSubmitting(false);
                     setSend(true)
                 }, 400);

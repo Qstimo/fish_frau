@@ -56,9 +56,10 @@ export const MenuPage = () => {
 
   }, [status, pathname]);
 
- 
+  console.log(kitchen, bar)
 
 
+  console.log(loading, data)
 
 
   const tabList = useMemo(()=>{

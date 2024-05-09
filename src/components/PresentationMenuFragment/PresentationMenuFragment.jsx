@@ -25,7 +25,7 @@ const PresentationMenuFragment = (props) => {
             whileInView="visible"
             viewport={{ amount: 0.2, once: true }}
             variants={textAnimation}
-            custom={id + 0.1}
+            custom={0.3}
             className={cls.box}>
             <div className={cls.PresentationMenuFragment}>
                 {
