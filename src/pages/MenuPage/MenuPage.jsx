@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchDataBar,
@@ -9,12 +9,22 @@ import { RenderMenu } from "../../components/RenderMenu";
 import { MenuFirstScreen } from "../../components/MenuFirstScreen";
 import { useLocation } from "react-router-dom";
 import { Loader } from "../../ui/Loader";
+import Slider from "../../components/SliderMenu";
+import SliderMenu from "../../components/SliderMenu";
+import { useInView } from "react-intersection-observer";
 
 
 
 export const MenuPage = () => {
   const dispatch = useDispatch();
 
+
+  const { ref, inView } = useInView({
+
+    threshold: 0,
+  });
+
+  const [swiperVisibality, setSwiperVisibality] = useState(false);
   const [tab, setTab] = useState(0);
   const { pathname } = useLocation()
   const [data, setData] = useState([])
@@ -46,16 +56,17 @@ export const MenuPage = () => {
 
   }, [status, pathname]);
 
-  console.log(kitchen, bar)
+ 
 
 
-  console.log(loading, data)
 
 
-  const tabList = data?.map((item, index) => ({
-    title: item.title,
-    index: index,
-  }))
+  const tabList = useMemo(()=>{
+    return data?.map((item, index) => ({
+      title: item.title,
+      index: index,
+    }))
+  }, [data] ) 
 
 
   const renderMenu = (arayItems, indexTab) => {
@@ -66,8 +77,9 @@ export const MenuPage = () => {
       {loading
         ? <>
           <MenuFirstScreen loading={!loading} tabList={tabList} tab={tab} setTab={setTab} />
+          <SliderMenu  isActive={inView} tab={tab} setTab={setTab} slidesList={tabList}/>
           {renderMenu(data, tab)}
-          <MenuFirstScreen loading={!loading} tabList={tabList} tab={tab} setTab={setTab} />
+          <div style={{height:'4px'}} ref={ref}></div>
         </>
         : <Loader />
       }

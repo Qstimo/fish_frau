@@ -1,0 +1,49 @@
+.Slider {
+    background-color: var(--color-beige);
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.29);
+    z-index: 6;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    height: 0;
+    transition: height 0.4s ease-in-out;
+
+    @media (max-width: 768px) {}
+}
+
+.Slider_active {
+    height: 65px;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    @media (max-width: 768px) {
+        top:50px;
+    }
+}
+
+.Slider_content {
+    position: relative;
+
+}
+
+.Tablist_item {
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: color 0.3s ease-in-out;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-grey);
+    text-shadow: 1px 1px 1px gray;
+    text-align: center;
+
+    @media (hover: hover) {
+        color: var(--color-white);
+    }
+
+
+}
+
+.Tablist_item_active {
+    color: var(--color-black);
+}

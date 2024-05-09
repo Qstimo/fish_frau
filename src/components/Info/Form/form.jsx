@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import cls from './form.module.scss'
 import { Button } from '../../../ui/Button';
@@ -8,6 +8,11 @@ import { Button } from '../../../ui/Button';
 
 export const FormList = ({ initialValues, initialValuesList, title }) => {
     const [send, setSend] = useState(null)
+    useEffect(()=>{
+        return ()=>{
+            setSend(null)
+        }
+    },[])
 
     if (send) {
         return <div className={cls.send_container}>
