@@ -10,15 +10,8 @@ import { fetchModalreservation } from '../../../redux/Slice/SliceModalReservatio
 
 export const FormList = ({ initialValues, initialValuesList, title }) => {
     const [send, setSend] = useState(null)
-<<<<<<< HEAD
-    useEffect(()=>{
-        return ()=>{
-            setSend(null)
-        }
-    },[])
-=======
     const dispatch =useDispatch()
->>>>>>> c59b58d639b64a7898403d354597392a827c4a2a
+
 
     if (send) {
         return <div className={cls.send_container}>
