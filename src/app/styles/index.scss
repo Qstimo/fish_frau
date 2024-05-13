@@ -1,6 +1,11 @@
 @import './reset.scss';
 @import './variables.scss';
 
+html {
+  overflow-y: scroll;
+}
+
+
 body {
   font: var(--font-m);
   color: var(--color-grey);
