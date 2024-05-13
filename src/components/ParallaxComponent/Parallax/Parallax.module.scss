@@ -11,12 +11,11 @@
     z-index: -2;
     scroll-behavior: smooth;
     &_img {
-        margin-top: -150px;
         position: absolute;
         left: -25px;
         right: 0;
         bottom: 0;
-        top: -1500px;
+        top: 700px;
         filter: brightness(0.6);
     }
 
@@ -39,6 +38,16 @@
 
 @media(max-width:986px){
     .ParallaxTop_img{
-        top: -2500px;
+        top: 929px;
+    }
+}
+@media(max-width:850px){
+    .ParallaxTop_img{
+        top: 1050px;
+    }
+}
+@media(max-width:501px){
+    .ParallaxTop_img{
+        top: 1250px;
     }
 }
