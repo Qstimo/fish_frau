@@ -1,5 +1,6 @@
 import cls from './PresentationMenuFragment.module.scss';
 import { easeIn, motion } from 'framer-motion'
+import api from '../../axios.js'
 
 const PresentationMenuFragment = (props) => {
     const { img, title, id, description } = props
@@ -33,7 +34,8 @@ const PresentationMenuFragment = (props) => {
                         <>
                             <div className={cls.img}>
                                 <span className={cls.img_bloc}></span>
-                                <img className={cls.img_item} src={`${'http://localhost:3000'}${img}`} alt="img" />
+                                {/* <img className={cls.img_item} src={`${'http://localhost:3000'}${img}`} alt="img" /> */}
+                                <img className={cls.img_item} src={`${api}${img}`} alt="img" />
                             </div>
                             <div className={cls.text}>
                                 <h5 className={cls.text_title}>{title}</h5>
@@ -48,7 +50,8 @@ const PresentationMenuFragment = (props) => {
                             </div>
                             <div className={cls.img}>
                                 <span className={cls.img_blocReverce}></span>
-                                <img className={cls.img_item} src={`${'http://localhost:3000'}${img}`} alt="img" />
+                                {/* <img className={cls.img_item} src={`${'http://localhost:3000'}${img}`} alt="img" /> */}
+                                <img className={cls.img_item} src={`${api}${img}`} alt="img" />
                             </div>
                         </>
                     )
