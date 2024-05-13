@@ -10,7 +10,7 @@ const ParallaxSlider = ({ background }) => {
     const [newHeigth, setNewHeigth] = useState(0)
 
 
-    const handleScroll = () => setOffSetY(window.pageYOffset)
+    const handleScroll = () => setOffSetY(window.scrollY)
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
