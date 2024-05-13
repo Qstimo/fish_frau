@@ -30,10 +30,10 @@ const AboutUs = () => {
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ amount: 0.2, once: true }}
                     className={cls.AboutUs_content}>
                     {aboutUsList.map((list, i) => (
                         <motion.div
-                            viewport={{ amount: 0.2, once: true }}
                             variants={textAnimation}
                             custom={i + 0.5}
 

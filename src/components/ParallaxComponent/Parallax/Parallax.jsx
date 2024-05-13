@@ -1,5 +1,4 @@
 import cls from './Parallax.module.scss';
-// import parallax from '../../img/b4.png'
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -32,9 +31,6 @@ const Parallax = ({ background }) => {
                     src={background}
                 />
             </div>
-            {/* <div className={cls.static}>
-                <img className={cls.static_img} src={background} alt="background" />
-            </div> */}
         </div>
     );
 };
