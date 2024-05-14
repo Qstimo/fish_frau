@@ -12,7 +12,7 @@ const Chef = () => {
         visible: (custom) => ({
             y: 0,
             opacity: 1,
-            transition: { easeIn, delay: custom * 0.3 ,duration: 0.7}
+            transition: { easeIn, delay: custom * 0.3 ,duration: 0.6}
         }),
     }
     return (
@@ -21,7 +21,7 @@ const Chef = () => {
         whileInView="visible"
         viewport={{ amount: 0.2, once: true }}
         variants={textAnimation}
-        custom={1}
+        custom={0.5}
         className={cls.Chef}>
             <div className={cls.Chef_box}>
                 <div className={cls.Chef_dots}>* * *</div>

@@ -52,7 +52,7 @@ const Providing = () => {
                 </div>
                 <div className={`${cls.advantages} ${cls.location}`}>
                     <img className={`${cls.advantages_img} ${cls.marginRight}`} src={img6} alt="img6" />
-                    <p className={cls.advantages_text}>VIP-ЗОНА</p>
+                    <p className={cls.advantages_text}>ИНДИВИДУАЛЬНЫЙ ПОДХОД</p>
                 </div>
             </div>
             <div className={ `${cls.box_reverse} ${cls.hidden}`}>
@@ -65,7 +65,7 @@ const Providing = () => {
                     <img className={`${cls.advantages_img} ${cls.marginRight}`} src={img5} alt="img5" />
                 </div>
                 <div className={`${cls.advantages} ${cls.location}`}>
-                    <p className={cls.advantages_text}>VIP-ЗОНА</p>
+                    <p className={cls.advantages_text}>ИНДИВИДУАЛЬНЫЙ ПОДХОД</p>
                     <img className={`${cls.advantages_img} ${cls.marginRight}`} src={img6} alt="img6" />
                 </div>
             </div>

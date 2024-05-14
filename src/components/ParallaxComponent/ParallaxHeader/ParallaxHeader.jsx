@@ -7,19 +7,14 @@ import OrderOnline from '../../OrderOnline/OrderOnline';
 const ParallaxHeader = ({ background }) => {
 
 
-    const [offSetY, setOffSetY] = useState(100)
-    const [newHeigth, setNewHeigth] = useState(0)
-
-
-    const handleScroll = () => setOffSetY(window.scrollY)
+    const [offsetY, setOffsetY] = useState(0);
+    const handleScroll = () => setOffsetY(window.pageYOffset);
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
-    useEffect(() => { 
-        setNewHeigth(offSetY - 0.9 * offSetY)
-    }, [offSetY])
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
 
     
@@ -27,7 +22,7 @@ const ParallaxHeader = ({ background }) => {
         <div className={cls.box}>
             <div className={cls.ParallaxHeader}>
                 <img
-                    style={{ transform: `translateY(${newHeigth * 9}px) scale(2) translateZ(-1px) ` }}
+                     style={{ transform: `translateY(-${offsetY * 0.5}px) scale(2) translateZ(-1px)` }}
                     className={cls.ParallaxHeader_img}
                     alt="parallax"
                     src={background}

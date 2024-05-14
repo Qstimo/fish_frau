@@ -7,7 +7,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { classNames } from './../../helpers/classnames';
 import WindowImg from "../WindowImg/WindowImg";
 import bg from '../../img/top-view-cocktail-essentials-with-lime-copy-space (1).webp'
-import bgMenu from '../../img/photoeditorsdk-export (1).webp'
+import bgMenu from '../../img/2150857926 (1)-photoaidcom-darken.webp'
 import { useLocation } from "react-router-dom";
 
 

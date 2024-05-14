@@ -1,7 +1,7 @@
 import cls from './PresentationMenuFragment.module.scss';
 import { easeIn, motion } from 'framer-motion'
-import {api} from '../../axios.js'
-console.log(api)
+
+
 
 
 const PresentationMenuFragment = (props) => {
