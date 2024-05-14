@@ -28,6 +28,8 @@ export const Header = () => {
     const toglleNavbar = () => {
         setOpen(prev => !prev)
     }
+    
+
 
     const scrollTo = () => {
         window.scrollTo({

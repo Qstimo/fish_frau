@@ -2,7 +2,6 @@
 @import './variables.scss';
 
 html {
-  overflow-y: scroll;
 }
 
 
@@ -18,7 +17,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 
@@ -38,9 +36,9 @@ body {
 }
 
 .modal-show {
-  @media (max-width:770px) {
-    height: 100vh;
-    overflow: hidden;
+  overflow: hidden;
+  height: 100vh;
+  @media (max-width:845px) {
     padding-right: 15px;
   }
 }

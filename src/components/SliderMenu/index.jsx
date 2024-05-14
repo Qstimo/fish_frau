@@ -6,10 +6,10 @@ import { classNames } from '../../helpers/classnames'
 
 
 
-function SliderMenu({ slidesList, tab, setTab,isActive }) {
+function SliderMenu({ slidesList, tab, setTab, }) {
 
     return (
-        <div className={classNames( cls.Slider, {[cls.Slider_active]:isActive},[])}>
+        <div className={cls.Slider}>
             <div className='content'>
                 <div className={cls.Slider_content}>
                     <SwiperRender slides={slidesList} tab={tab} setTab={setTab}/>
