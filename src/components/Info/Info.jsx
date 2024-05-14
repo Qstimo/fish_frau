@@ -15,11 +15,11 @@ export const Info = () => {
     const toglleModal = () => {
         setOpen(prev => !prev)
         if (!open) {
-            document.body.style.overflowY = 'hidden'
+            document.body.style.overflow = 'hidden'
             document.body.classList.add('modal-show');
         }
         if (open) {
-            document.body.style.overflowY = 'scroll'
+            document.body.style.overflow = 'auto'
             document.body.classList.remove('modal-show');
         }
     }

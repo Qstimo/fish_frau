@@ -40,7 +40,7 @@ export const FormList = ({ initialValues, initialValuesList, title }) => {
                     errors.time = 'Время не может быть раньше текущего';
                 }
 
-                if (!values.phone || !/^\+?[0-9]{7,15}$/.test(values.phone)) {
+                if (!values.phone || !/^\+?\d{1,3}\s?\d{3}\s?\d{3}-?\d{2}-?\d{2}$/.test(values.phone)) {
                     errors.phone = 'Не корректный номер телефона';
                 }
 
