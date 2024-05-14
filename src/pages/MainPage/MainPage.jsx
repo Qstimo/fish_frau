@@ -9,7 +9,6 @@ import ParallaxMain from '../../components/ParallaxComponent/ParallaxMain/Parall
 import Providing from '../../components/Providing/Providing'
 import AboutUs from '../../components/AboutUs'
 import ParallaxBottom from '../../components/ParallaxComponent/ParallaxBottom/ParallaxBottom'
-import ParallaxHeader from '../../components/ParallaxComponent/ParallaxHeader/ParallaxHeader'
 //img-parallax
 import background1 from '../../img/b4.png'
 import background2 from '../../img/b3.png'
@@ -25,7 +24,6 @@ import adaptivhome from '../../img/IMG_2912-3.jpg'
 import ParallaxSlider from '../../components/ParallaxComponent/ParallaxSlider/ParallaxSlider'
 import WindowImg from '../../components/WindowImg/WindowImg'
 import { useDispatch } from 'react-redux'
-import { fetchDataMenu } from '../../redux/Slice/SliceMenu/SliceMenu'
 import { fetchDataBar } from '../../redux/Slice/SliceBar/SliceBar'
 import { Element } from 'react-scroll'
 import { LINKS } from '../../config'
@@ -38,7 +36,6 @@ export const MainPage = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(fetchDataMenu())
         dispatch(fetchDataBar())
     }, [])
 
