@@ -7,7 +7,7 @@ const OrderOnline = () => {
         <div className={cls.OrderOnline}>
             <Link
                 className={cls.OrderOnline_link}
-                to='https://xn--e1ane2e.xn--80aaco5bemccfl7i.xn--p1ai'
+                to='https://foodeon.com/venue/restoran-ryba-zwml?utm_source=restoran-ryba&utm_medium=short_url&utm_campaign=no_campaign&r=cTbZFEAAfSxX3o6zax7uW'
                 target="_blank"
             > Посмотреть фото блюд и сделать заказ</Link>
         </div>
