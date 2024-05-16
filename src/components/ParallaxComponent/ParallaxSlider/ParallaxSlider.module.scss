@@ -60,6 +60,17 @@
         top: 5500px;
     }
 }
+@media(max-width:450px) {
+    .ParallaxSlider_img {
+        top: 5300px;
+    }
+}
+@media(max-width:380px) {
+    .ParallaxSlider_img {
+        top: 5200px;
+    }
+}
+
 
 
 

@@ -36,7 +36,6 @@ const PresentationMenuFragment = (props) => {
                         <>
                             <div className={cls.img}>
                                 <span className={cls.img_bloc}></span>
-                                {/* <img className={cls.img_item} src={`${'http://localhost:3000'}${img}`} alt="img" /> */}
                                 <img className={cls.img_item} src={`${img}`} alt="img" />
                             </div>
                             <div className={cls.text}>
@@ -52,7 +51,6 @@ const PresentationMenuFragment = (props) => {
                             </div>
                             <div className={cls.img}>
                                 <span className={cls.img_blocReverce}></span>
-                                {/* <img className={cls.img_item} src={`${'http://localhost:3000'}${img}`} alt="img" /> */}
                                 <img className={cls.img_item} src={`${img}`} alt="img" />
                             </div>
                         </>

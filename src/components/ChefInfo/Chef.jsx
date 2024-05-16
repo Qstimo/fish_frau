@@ -1,5 +1,5 @@
 import cls from './Chef.module.scss'
-import chef from '../../img/1__7_.zndkD (1) — копия.jpg'
+import chef from '../../img/chef.jpg'
 import { easeIn, motion } from 'framer-motion'
 
 const Chef = () => {

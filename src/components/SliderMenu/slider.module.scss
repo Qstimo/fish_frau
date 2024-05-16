@@ -26,8 +26,8 @@
     transition: color 0.3s ease-in-out;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--color-grey);
-    text-shadow: 1px 1px 1px gray;
+    color: var(--color-grey) ;
+    text-shadow: 1px 1px 1px gray ;
     text-align: center;
 
     @media (hover: hover) {
